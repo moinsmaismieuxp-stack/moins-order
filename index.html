@@ -4,20 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>簡法甜點 MOINS Pâtisserie｜訂購表單</title>
-<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Segoe UI', sans-serif; background: #fdf6f0; color: #333; min-height: 100vh; }
-
 .header { background: linear-gradient(135deg, #2c1a0e, #6b3a2a); padding: 28px 20px 20px; text-align: center; color: #fff; }
 .header h1 { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
 .header h2 { font-size: 12px; opacity: 0.75; margin-top: 4px; font-weight: 400; letter-spacing: 2px; }
-
 .form-wrap { max-width: 480px; margin: 0 auto; padding: 16px 14px 48px; }
-
 .section { background: #fff; border-radius: 14px; padding: 18px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .section-title { font-size: 14px; font-weight: 700; color: #6b3a2a; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; border-bottom: 1.5px solid #f3e9e3; padding-bottom: 10px; }
-
 .field { margin-bottom: 13px; }
 .field:last-child { margin-bottom: 0; }
 label { display: block; font-size: 12px; font-weight: 600; color: #777; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -26,12 +21,10 @@ input, select, textarea { width: 100%; border: 1.5px solid #e8e0d8; border-radiu
 input:focus, select:focus, textarea:focus { outline: none; border-color: #6b3a2a; background: #fff; }
 textarea { resize: vertical; min-height: 80px; }
 .err { font-size: 11px; color: #c0392b; margin-top: 3px; display: none; }
-
-/* 商品卡片 */
 .product-card { border: 1.5px solid #e8e0d8; border-radius: 12px; margin-bottom: 12px; overflow: hidden; background: #fafaf8; }
 .product-card:last-child { margin-bottom: 0; }
-.product-img { width: 100%; height: 160px; object-fit: cover; background: #f0e8e0; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 13px; }
-.product-img img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.product-img-wrap { width: 100%; height: 160px; background: #f0e8e0; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+.product-img-wrap img { width: 100%; height: 160px; object-fit: cover; display: block; }
 .product-info { padding: 12px 14px 14px; }
 .product-name { font-size: 14px; font-weight: 700; color: #2c1a0e; margin-bottom: 2px; }
 .product-desc { font-size: 11px; color: #999; margin-bottom: 10px; }
@@ -44,52 +37,44 @@ textarea { resize: vertical; min-height: 80px; }
 .qty-btn { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #6b3a2a; background: #fff; color: #6b3a2a; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .qty-btn:active { background: #6b3a2a; color: #fff; }
 .qty-num { font-size: 14px; font-weight: 700; min-width: 20px; text-align: center; color: #2c1a0e; }
-
-/* 單品 */
 .addon-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border: 1.5px solid #e8e0d8; border-radius: 8px; background: #fff; margin-bottom: 8px; }
 .addon-row:last-child { margin-bottom: 0; }
 .addon-row.has-item { border-color: #6b3a2a; background: #fdf6f0; }
 .addon-name { font-size: 13px; font-weight: 500; }
 .addon-price-tag { font-size: 11px; color: #999; margin-top: 1px; }
-
-/* 金額摘要 */
 .summary { background: #2c1a0e; border-radius: 14px; padding: 18px 16px; margin-bottom: 14px; color: #fff; }
 .summary-title { font-size: 13px; font-weight: 700; color: #f0d5b8; margin-bottom: 12px; letter-spacing: 1px; }
 .s-row { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; color: #c4a882; }
 .s-divider { border: none; border-top: 1px dashed #4a3020; margin: 10px 0; }
 .s-total { display: flex; justify-content: space-between; font-size: 17px; font-weight: 700; color: #fff; }
-
 .submit-btn { width: 100%; padding: 16px; background: linear-gradient(135deg, #2c1a0e, #6b3a2a); color: #fff; border: none; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: 2px; box-shadow: 0 4px 14px rgba(107,58,42,0.35); }
 .submit-btn:disabled { background: #bbb; box-shadow: none; cursor: not-allowed; }
-
-.loading { text-align: center; padding: 40px 20px; display: none; }
-.loading p { color: #999; font-size: 14px; margin-top: 12px; }
-.spinner { width: 40px; height: 40px; border: 3px solid #f0e8e0; border-top-color: #6b3a2a; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto; }
+.loading { text-align: center; padding: 60px 20px; }
+.spinner { width: 40px; height: 40px; border: 3px solid #f0e8e0; border-top-color: #6b3a2a; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
 @keyframes spin { to { transform: rotate(360deg); } }
-
+.loading p { color: #999; font-size: 14px; }
 .success-screen { display: none; text-align: center; padding: 60px 24px; }
 .success-icon { font-size: 60px; margin-bottom: 16px; }
 .success-title { font-size: 20px; font-weight: 700; color: #2c1a0e; margin-bottom: 10px; }
 .success-msg { font-size: 13px; color: #777; line-height: 1.8; }
+.debug-bar { background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 12px; color: #856404; display: none; }
 </style>
 </head>
 <body>
 
-<!-- 載入中 -->
-<div class="loading" id="loadingScreen">
+<div id="loadingScreen" class="loading">
   <div class="spinner"></div>
   <p>載入商品資訊中⋯</p>
 </div>
 
-<!-- 表單 -->
 <div id="formScreen" style="display:none">
   <div class="header">
     <h1>簡法甜點</h1>
     <h2>MOINS Pâtisserie</h2>
   </div>
   <div class="form-wrap">
+    <div class="debug-bar" id="debugBar"></div>
 
-    <!-- 基本資料 -->
     <div class="section">
       <div class="section-title">👤 基本資料</div>
       <div class="field"><label class="required">訂購姓名</label><input type="text" id="name" placeholder="請輸入姓名"><div class="err" id="err-name">請填寫姓名</div></div>
@@ -99,25 +84,23 @@ textarea { resize: vertical; min-height: 80px; }
         <select id="pickupTime">
           <option value="">請選擇時間</option>
           <option>12:00</option><option>13:00</option><option>14:00</option>
-          <option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option>
+          <option>18:00</option><option>19:00</option>
         </select>
         <div class="err" id="err-time">請選擇時間</div>
       </div>
     </div>
 
-    <!-- 蛋糕商品（動態產生） -->
-    <div class="section" id="cakeSection">
+    <div class="section">
       <div class="section-title">🎂 蛋糕選購</div>
       <div id="cakeProducts"><div style="color:#bbb;font-size:13px;text-align:center;padding:20px">載入中⋯</div></div>
     </div>
 
-    <!-- 單品加購 -->
     <div class="section">
       <div class="section-title">🍮 單品加購</div>
       <div id="singleProducts"><div style="color:#bbb;font-size:13px;text-align:center;padding:20px">載入中⋯</div></div>
     </div>
 
-    <!-- 配件加購 -->
     <div class="section">
       <div class="section-title">🛍️ 配件加購</div>
       <div class="field">
@@ -139,13 +122,11 @@ textarea { resize: vertical; min-height: 80px; }
       </div>
     </div>
 
-    <!-- 備註 -->
     <div class="section">
       <div class="section-title">📝 備註</div>
       <textarea id="note" placeholder="客製化文字、特殊需求等（選填）"></textarea>
     </div>
 
-    <!-- 金額摘要 -->
     <div class="summary">
       <div class="summary-title">💰 訂單金額摘要</div>
       <div id="summaryItems"><div style="color:#6a5040;font-size:12px;text-align:center">尚未選擇任何品項</div></div>
@@ -157,7 +138,6 @@ textarea { resize: vertical; min-height: 80px; }
   </div>
 </div>
 
-<!-- 成功畫面 -->
 <div class="success-screen" id="successScreen">
   <div class="success-icon">🎉</div>
   <div class="success-title">訂單已送出！</div>
@@ -165,62 +145,20 @@ textarea { resize: vertical; min-height: 80px; }
 </div>
 
 <script>
-// ==============================
-// 設定區（部署後填入）
-// ==============================
-const LIFF_ID = "2009889923-RxCLymLI";
-const GAS_URL = "https://script.google.com/macros/s/AKfycbz-tLLmvmOGI0kocTaWRnT5ye3erx8rQoU5qDDAQ6GWTqLKU4OK3mxOvhP73C9NDsXk/exec";
-const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbxV28fHfF8Z0yAGxextrDNcG7vZ05NjSyJ6ll7be-7Nt4mxvPsMeXQtJh2R_2j3JeDa/exec";
+const LIFF_ID     = "2009889923-RxCLymLI";
+const GAS_URL     = "https://script.google.com/macros/s/AKfycbz-tLLmvmOGI0kocTaWRnT5ye3erx8rQoU5qDDAQ6GWTqLKU4OK3mxOvhP73C9NDsXk/exec";
+const SHEET_API   = "https://script.google.com/macros/s/AKfycbxV28fHfF8Z0yAGxextrDNcG7vZ05NjSyJ6ll7be-7Nt4mxvPsMeXQtJh2R_2j3JeDa/exec";
 
-// ==============================
-// 全域狀態
-// ==============================
 let lineUID = "";
-let products = [];         // 從試算表讀取的商品
-const cakeQty = {};        // { "商品ID_尺寸": 數量 }
+let products = [];
+const cakeQty = {};
 const addonQty = { bag: 0 };
-const singleQty = {};      // { "商品ID": 數量 }
+const singleQty = {};
 
-// ==============================
-// 初始化
-// ==============================
-document.getElementById("loadingScreen").style.display = "block";
-
-async function init() {
-  // 設定最小日期（明天）
-  const d = new Date();
-  d.setDate(d.getDate() + 1);
-  document.getElementById("pickupDate").min = d.toISOString().split("T")[0];
-
-  // LIFF 初始化
-  try {
-    await liff.init({ liffId: LIFF_ID });
-    if (liff.isLoggedIn()) {
-      const p = await liff.getProfile();
-      lineUID = p.userId;
-    }
-  } catch(e) { console.log("LIFF:", e); }
-
-  // 讀取商品
-  await loadProducts();
-
-  document.getElementById("loadingScreen").style.display = "none";
-  document.getElementById("formScreen").style.display = "block";
-}
-
-// ==============================
-// 讀取商品（從 Google Apps Script）
-// ==============================
-async function loadProducts() {
-  try {
-    const res = await fetch(SHEET_API_URL);
-    const data = await res.json();
-    products = data;
-  } catch(e) {
-    // 若讀取失敗，使用預設商品
-    products = getDefaultProducts();
-  }
-  renderProducts();
+function debug(msg) {
+  const bar = document.getElementById("debugBar");
+  bar.style.display = "block";
+  bar.innerHTML += msg + "<br>";
 }
 
 function getDefaultProducts() {
@@ -241,78 +179,100 @@ function getDefaultProducts() {
       { size:"6吋（約6-8人）", price:1380 },
       { size:"8吋（約7-10人）", price:1880 }
     ]},
-    { id:"D", type:"single", name:"香草可麗露", desc:"", price:80, unit:"顆" },
-    { id:"E", type:"single", name:"香香焦糖嫩布丁", desc:"", price:100, unit:"杯" }
+    { id:"D", type:"single", name:"香草可麗露", desc:"", img:"", price:80, unit:"顆" },
+    { id:"E", type:"single", name:"香香焦糖嫩布丁", desc:"", img:"", price:100, unit:"杯" }
   ];
 }
 
-// ==============================
-// 渲染商品
-// ==============================
+async function init() {
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  document.getElementById("pickupDate").min = d.toISOString().split("T")[0];
+
+  // LIFF 初始化（失敗也繼續）
+  try {
+    const liffScript = document.createElement("script");
+    liffScript.src = "https://static.line-scdn.net/liff/edge/2/sdk.js";
+    liffScript.onload = async () => {
+      try {
+        await liff.init({ liffId: LIFF_ID });
+        if (liff.isLoggedIn()) {
+          const p = await liff.getProfile();
+          lineUID = p.userId;
+          debug("✅ LINE UID 取得成功");
+        } else {
+          debug("⚠️ 非 LINE 內開啟，UID 為空");
+        }
+      } catch(e) { debug("⚠️ LIFF init 失敗：" + e.message); }
+    };
+    document.head.appendChild(liffScript);
+  } catch(e) { debug("⚠️ LIFF SDK 載入失敗"); }
+
+  // 讀取商品（失敗用預設）
+  try {
+    const res = await fetch(SHEET_API);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    products = await res.json();
+    if (!Array.isArray(products) || products.length === 0) throw new Error("空資料");
+    debug("✅ 商品讀取成功：" + products.length + " 筆");
+  } catch(e) {
+    debug("⚠️ 商品讀取失敗，使用預設資料：" + e.message);
+    products = getDefaultProducts();
+  }
+
+  renderProducts();
+  document.getElementById("loadingScreen").style.display = "none";
+  document.getElementById("formScreen").style.display = "block";
+}
+
 function renderProducts() {
   const cakes = products.filter(p => p.type === "cake");
   const singles = products.filter(p => p.type === "single");
 
-  // 蛋糕
   let cakeHTML = "";
   cakes.forEach(p => {
     const imgHTML = p.img
-      ? `<div class="product-img"><img src="${p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='🎂'"></div>`
-      : `<div class="product-img" style="height:80px;font-size:28px;display:flex;align-items:center;justify-content:center">🎂</div>`;
-
+      ? `<div class="product-img-wrap"><img src="${p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='🎂'"></div>`
+      : `<div class="product-img-wrap">🎂</div>`;
     let sizesHTML = "";
     p.sizes.forEach(s => {
       const key = `${p.id}_${s.size}`;
-      cakeQty[key] = cakeQty[key] || 0;
-      sizesHTML += `
-        <div class="size-row" id="row-${key}">
-          <span class="size-left">${s.size}</span>
-          <div style="display:flex;align-items:center">
-            <span class="size-price">NT$${s.price.toLocaleString()}</span>
-            <div class="qty-ctrl">
-              <button class="qty-btn" onclick="changeCake('${key}',-1,${s.price})">−</button>
-              <span class="qty-num" id="qty-${key}">0</span>
-              <button class="qty-btn" onclick="changeCake('${key}',1,${s.price})">+</button>
-            </div>
+      cakeQty[key] = 0;
+      sizesHTML += `<div class="size-row" id="row-${key}">
+        <span class="size-left">${s.size}</span>
+        <div style="display:flex;align-items:center">
+          <span class="size-price">NT$${s.price.toLocaleString()}</span>
+          <div class="qty-ctrl">
+            <button class="qty-btn" onclick="changeCake('${key}',-1)">−</button>
+            <span class="qty-num" id="qty-${key}">0</span>
+            <button class="qty-btn" onclick="changeCake('${key}',1)">+</button>
           </div>
-        </div>`;
-    });
-
-    cakeHTML += `
-      <div class="product-card">
-        ${imgHTML}
-        <div class="product-info">
-          <div class="product-name">${p.name}</div>
-          ${p.desc ? `<div class="product-desc">${p.desc}</div>` : ""}
-          <div class="size-options">${sizesHTML}</div>
         </div>
       </div>`;
+    });
+    cakeHTML += `<div class="product-card">${imgHTML}
+      <div class="product-info">
+        <div class="product-name">${p.name}</div>
+        ${p.desc ? `<div class="product-desc">${p.desc}</div>` : ""}
+        <div class="size-options">${sizesHTML}</div>
+      </div></div>`;
   });
-  document.getElementById("cakeProducts").innerHTML = cakeHTML;
+  document.getElementById("cakeProducts").innerHTML = cakeHTML || "<div style='color:#bbb;font-size:13px;text-align:center;padding:20px'>暫無商品</div>";
 
-  // 單品
   let singleHTML = "";
   singles.forEach(p => {
     singleQty[p.id] = 0;
-    singleHTML += `
-      <div class="addon-row" id="single-row-${p.id}">
-        <div>
-          <div class="addon-name">${p.name}</div>
-          <div class="addon-price-tag">NT$${p.price} / ${p.unit}</div>
-        </div>
-        <div class="qty-ctrl">
-          <button class="qty-btn" onclick="changeSingle('${p.id}',-1)">−</button>
-          <span class="qty-num" id="qty-single-${p.id}">0</span>
-          <button class="qty-btn" onclick="changeSingle('${p.id}',1)">+</button>
-        </div>
-      </div>`;
+    singleHTML += `<div class="addon-row" id="single-row-${p.id}">
+      <div><div class="addon-name">${p.name}</div><div class="addon-price-tag">NT$${p.price} / ${p.unit}</div></div>
+      <div class="qty-ctrl">
+        <button class="qty-btn" onclick="changeSingle('${p.id}',-1)">−</button>
+        <span class="qty-num" id="qty-single-${p.id}">0</span>
+        <button class="qty-btn" onclick="changeSingle('${p.id}',1)">+</button>
+      </div></div>`;
   });
-  document.getElementById("singleProducts").innerHTML = singleHTML;
+  document.getElementById("singleProducts").innerHTML = singleHTML || "<div style='color:#bbb;font-size:13px;text-align:center;padding:20px'>暫無商品</div>";
 }
 
-// ==============================
-// 數量控制
-// ==============================
 function changeCake(key, delta) {
   cakeQty[key] = Math.max(0, (cakeQty[key] || 0) + delta);
   document.getElementById(`qty-${key}`).textContent = cakeQty[key];
@@ -337,26 +297,18 @@ function changeAddon(key, delta) {
   updateSummary();
 }
 
-// ==============================
-// 金額摘要
-// ==============================
 function updateSummary() {
   let total = 0, html = "";
-
-  // 蛋糕
   products.filter(p => p.type === "cake").forEach(p => {
     p.sizes.forEach(s => {
-      const key = `${p.id}_${s.size}`;
-      const q = cakeQty[key] || 0;
+      const q = cakeQty[`${p.id}_${s.size}`] || 0;
       if (q > 0) {
         const sub = s.price * q;
-        html += `<div class="s-row"><span>${p.name} ${s.size}${q > 1 ? ` ×${q}` : ""}</span><span>NT$${sub.toLocaleString()}</span></div>`;
+        html += `<div class="s-row"><span>${p.name} ${s.size}${q>1?` ×${q}`:""}</span><span>NT$${sub.toLocaleString()}</span></div>`;
         total += sub;
       }
     });
   });
-
-  // 單品
   products.filter(p => p.type === "single").forEach(p => {
     const q = singleQty[p.id] || 0;
     if (q > 0) {
@@ -365,29 +317,13 @@ function updateSummary() {
       total += sub;
     }
   });
-
-  // 餐具
-  const plateQ = parseInt(document.getElementById("plate").value || 0);
-  if (plateQ > 0) {
-    const sub = plateQ * 30;
-    html += `<div class="s-row"><span>餐具 ×${plateQ}組</span><span>NT$${sub.toLocaleString()}</span></div>`;
-    total += sub;
-  }
-
-  // 保冷袋
-  if (addonQty.bag > 0) {
-    const sub = addonQty.bag * 100;
-    html += `<div class="s-row"><span>保冷袋 ×${addonQty.bag}</span><span>NT$${sub.toLocaleString()}</span></div>`;
-    total += sub;
-  }
-
+  const pq = parseInt(document.getElementById("plate").value || 0);
+  if (pq > 0) { html += `<div class="s-row"><span>餐具 ×${pq}組</span><span>NT$${(pq*30).toLocaleString()}</span></div>`; total += pq*30; }
+  if (addonQty.bag > 0) { html += `<div class="s-row"><span>保冷袋 ×${addonQty.bag}</span><span>NT$${(addonQty.bag*100).toLocaleString()}</span></div>`; total += addonQty.bag*100; }
   document.getElementById("summaryItems").innerHTML = html || '<div style="color:#6a5040;font-size:12px;text-align:center">尚未選擇任何品項</div>';
   document.getElementById("summaryTotal").textContent = `NT$${total.toLocaleString()}`;
 }
 
-// ==============================
-// 驗證
-// ==============================
 function validate() {
   let ok = true;
   [["name","err-name"],["phone","err-phone"],["pickupDate","err-date"],["pickupTime","err-time"]].forEach(([id,err]) => {
@@ -395,65 +331,45 @@ function validate() {
     document.getElementById(err).style.display = v ? "none" : "block";
     if (!v) ok = false;
   });
-
-  // 至少選一項
   const hasCake = Object.values(cakeQty).some(q => q > 0);
   const hasSingle = Object.values(singleQty).some(q => q > 0);
   if (!hasCake && !hasSingle) { alert("請至少選擇一項商品！"); ok = false; }
   return ok;
 }
 
-// ==============================
-// 組合訂單資料
-// ==============================
 function buildOrderData() {
   let total = 0;
   const items = [];
-
   products.filter(p => p.type === "cake").forEach(p => {
     p.sizes.forEach(s => {
       const q = cakeQty[`${p.id}_${s.size}`] || 0;
-      if (q > 0) {
-        items.push({ name:`${p.name} ${s.size}`, qty: q, price: s.price, sub: s.price * q });
-        total += s.price * q;
-      }
+      if (q > 0) { items.push({ name:`${p.name} ${s.size}`, qty:q, price:s.price, sub:s.price*q }); total += s.price*q; }
     });
   });
-
   products.filter(p => p.type === "single").forEach(p => {
     const q = singleQty[p.id] || 0;
-    if (q > 0) {
-      items.push({ name: p.name, qty: q, price: p.price, sub: p.price * q });
-      total += p.price * q;
-    }
+    if (q > 0) { items.push({ name:p.name, qty:q, price:p.price, sub:p.price*q }); total += p.price*q; }
   });
-
-  const plateQ = parseInt(document.getElementById("plate").value || 0);
-  if (plateQ > 0) { items.push({ name:`餐具`, qty: plateQ, price: 30, sub: plateQ * 30 }); total += plateQ * 30; }
-  if (addonQty.bag > 0) { items.push({ name:"保冷袋", qty: addonQty.bag, price: 100, sub: addonQty.bag * 100 }); total += addonQty.bag * 100; }
-
+  const pq = parseInt(document.getElementById("plate").value || 0);
+  if (pq > 0) { items.push({ name:"餐具", qty:pq, price:30, sub:pq*30 }); total += pq*30; }
+  if (addonQty.bag > 0) { items.push({ name:"保冷袋", qty:addonQty.bag, price:100, sub:addonQty.bag*100 }); total += addonQty.bag*100; }
   return {
     lineUID,
     name: document.getElementById("name").value.trim(),
     phone: document.getElementById("phone").value.trim(),
     pickupDate: document.getElementById("pickupDate").value,
     pickupTime: document.getElementById("pickupTime").value,
-    items,
-    total,
+    items, total,
     note: document.getElementById("note").value.trim(),
     timestamp: new Date().toLocaleString("zh-TW", { timeZone: "Asia/Taipei" })
   };
 }
 
-// ==============================
-// 送出訂單
-// ==============================
 async function submitForm() {
   if (!validate()) return;
   const btn = document.getElementById("submitBtn");
   btn.disabled = true;
   btn.textContent = "送出中⋯⋯";
-
   try {
     await fetch(GAS_URL, {
       method: "POST",
@@ -464,6 +380,7 @@ async function submitForm() {
     document.getElementById("formScreen").style.display = "none";
     document.getElementById("successScreen").style.display = "block";
   } catch(e) {
+    debug("❌ 送出失敗：" + e.message);
     alert("送出失敗，請再試一次");
     btn.disabled = false;
     btn.textContent = "確認送出訂單 🎂";
