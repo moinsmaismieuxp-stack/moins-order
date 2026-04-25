@@ -1,523 +1,476 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #5b6274; -webkit-text-stroke: #5b6274; background-color: #ffffff}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #a70014; -webkit-text-stroke: #a70014; background-color: #ffffff}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #ad0018; -webkit-text-stroke: #ad0018; background-color: #ffffff}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #0f7001; -webkit-text-stroke: #0f7001; background-color: #ffffff}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #101318; -webkit-text-stroke: #101318; background-color: #ffffff}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #101318; -webkit-text-stroke: #101318; background-color: #ffffff; min-height: 17.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #6c00b5; -webkit-text-stroke: #6c00b5; background-color: #ffffff}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #20242d; -webkit-text-stroke: #20242d; background-color: #ffffff}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'PingFang TC'; color: #5b6274; -webkit-text-stroke: #5b6274; background-color: #ffffff}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #0439b5; -webkit-text-stroke: #0439b5; background-color: #ffffff}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.AppleSystemUIFontMonospaced'; color: #0e6e6d; -webkit-text-stroke: #0e6e6d; background-color: #ffffff}
-    span.s1 {font-kerning: none; color: #20242d; -webkit-text-stroke: 0px #20242d}
-    span.s2 {font-kerning: none}
-    span.s3 {font-kerning: none; color: #ad0018; -webkit-text-stroke: 0px #ad0018}
-    span.s4 {font-kerning: none; color: #0f7001; -webkit-text-stroke: 0px #0f7001}
-    span.s5 {font-kerning: none; color: #a70014; -webkit-text-stroke: 0px #a70014}
-    span.s6 {font: 14.0px 'PingFang TC'; font-kerning: none}
-    span.s7 {font-kerning: none; color: #101318; -webkit-text-stroke: 0px #101318}
-    span.s8 {font-kerning: none; color: #0e6e6d; -webkit-text-stroke: 0px #0e6e6d}
-    span.s9 {font-kerning: none; color: #0439b5; -webkit-text-stroke: 0px #0439b5}
-    span.s10 {font: 14.0px '.Apple Color Emoji UI'; font-kerning: none}
-    span.s11 {font: 14.0px 'PingFang TC'; font-kerning: none; color: #101318; -webkit-text-stroke: 0px #101318}
-    span.s12 {font: 14.0px 'PingFang TC'; font-kerning: none; color: #0f7001; -webkit-text-stroke: 0px #0f7001}
-    span.s13 {font: 14.0px '.Apple Color Emoji UI'; font-kerning: none; color: #101318; -webkit-text-stroke: 0px #101318}
-    span.s14 {font: 14.0px '.AppleSystemUIFontMonospaced'; font-kerning: none}
-    span.s15 {font-kerning: none; color: #6c00b5; -webkit-text-stroke: 0px #6c00b5}
-    span.s16 {font-kerning: none; color: #5b6274; -webkit-text-stroke: 0px #5b6274}
-    span.s17 {font: 14.0px 'PingFang TC'; font-kerning: none; color: #5b6274; -webkit-text-stroke: 0px #5b6274}
-    span.s18 {font-kerning: none; color: #a23704; -webkit-text-stroke: 0px #a23704}
-    span.s19 {font: 14.0px '.AppleSystemUIFontMonospaced'; font-kerning: none; color: #101318; -webkit-text-stroke: 0px #101318}
-    span.s20 {font: 14.0px Monaco; font-kerning: none}
-    span.s21 {font-kerning: none; color: #a83b09; -webkit-text-stroke: 0px #a83b09}
-    span.s22 {font: 14.0px '.Apple Color Emoji UI'; font-kerning: none; color: #0f7001; -webkit-text-stroke: 0px #0f7001}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>簡法甜點 MOINS Pâtisserie｜訂購表單</title>
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', sans-serif; background: #fdf6f0; color: #333; min-height: 100vh; }
+
+.header { background: linear-gradient(135deg, #2c1a0e, #6b3a2a); padding: 28px 20px 20px; text-align: center; color: #fff; }
+.header h1 { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+.header h2 { font-size: 12px; opacity: 0.75; margin-top: 4px; font-weight: 400; letter-spacing: 2px; }
+
+.form-wrap { max-width: 480px; margin: 0 auto; padding: 16px 14px 48px; }
+
+.section { background: #fff; border-radius: 14px; padding: 18px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.section-title { font-size: 14px; font-weight: 700; color: #6b3a2a; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; border-bottom: 1.5px solid #f3e9e3; padding-bottom: 10px; }
+
+.field { margin-bottom: 13px; }
+.field:last-child { margin-bottom: 0; }
+label { display: block; font-size: 12px; font-weight: 600; color: #777; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+.required::after { content: " *"; color: #c0392b; }
+input, select, textarea { width: 100%; border: 1.5px solid #e8e0d8; border-radius: 8px; padding: 10px 12px; font-size: 14px; color: #333; background: #fafaf8; transition: border 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: #6b3a2a; background: #fff; }
+textarea { resize: vertical; min-height: 80px; }
+.err { font-size: 11px; color: #c0392b; margin-top: 3px; display: none; }
+
+/* 商品卡片 */
+.product-card { border: 1.5px solid #e8e0d8; border-radius: 12px; margin-bottom: 12px; overflow: hidden; background: #fafaf8; }
+.product-card:last-child { margin-bottom: 0; }
+.product-img { width: 100%; height: 160px; object-fit: cover; background: #f0e8e0; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 13px; }
+.product-img img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.product-info { padding: 12px 14px 14px; }
+.product-name { font-size: 14px; font-weight: 700; color: #2c1a0e; margin-bottom: 2px; }
+.product-desc { font-size: 11px; color: #999; margin-bottom: 10px; }
+.size-options { display: flex; flex-direction: column; gap: 7px; }
+.size-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; border: 1.5px solid #e8e0d8; border-radius: 8px; background: #fff; }
+.size-row.has-item { border-color: #6b3a2a; background: #fdf6f0; }
+.size-left { font-size: 13px; font-weight: 500; color: #444; }
+.size-price { font-size: 12px; color: #6b3a2a; font-weight: 700; margin-right: 10px; }
+.qty-ctrl { display: flex; align-items: center; gap: 8px; }
+.qty-btn { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #6b3a2a; background: #fff; color: #6b3a2a; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.qty-btn:active { background: #6b3a2a; color: #fff; }
+.qty-num { font-size: 14px; font-weight: 700; min-width: 20px; text-align: center; color: #2c1a0e; }
+
+/* 單品 */
+.addon-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border: 1.5px solid #e8e0d8; border-radius: 8px; background: #fff; margin-bottom: 8px; }
+.addon-row:last-child { margin-bottom: 0; }
+.addon-row.has-item { border-color: #6b3a2a; background: #fdf6f0; }
+.addon-name { font-size: 13px; font-weight: 500; }
+.addon-price-tag { font-size: 11px; color: #999; margin-top: 1px; }
+
+/* 金額摘要 */
+.summary { background: #2c1a0e; border-radius: 14px; padding: 18px 16px; margin-bottom: 14px; color: #fff; }
+.summary-title { font-size: 13px; font-weight: 700; color: #f0d5b8; margin-bottom: 12px; letter-spacing: 1px; }
+.s-row { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; color: #c4a882; }
+.s-divider { border: none; border-top: 1px dashed #4a3020; margin: 10px 0; }
+.s-total { display: flex; justify-content: space-between; font-size: 17px; font-weight: 700; color: #fff; }
+
+.submit-btn { width: 100%; padding: 16px; background: linear-gradient(135deg, #2c1a0e, #6b3a2a); color: #fff; border: none; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: 2px; box-shadow: 0 4px 14px rgba(107,58,42,0.35); }
+.submit-btn:disabled { background: #bbb; box-shadow: none; cursor: not-allowed; }
+
+.loading { text-align: center; padding: 40px 20px; display: none; }
+.loading p { color: #999; font-size: 14px; margin-top: 12px; }
+.spinner { width: 40px; height: 40px; border: 3px solid #f0e8e0; border-top-color: #6b3a2a; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.success-screen { display: none; text-align: center; padding: 60px 24px; }
+.success-icon { font-size: 60px; margin-bottom: 16px; }
+.success-title { font-size: 20px; font-weight: 700; color: #2c1a0e; margin-bottom: 10px; }
+.success-msg { font-size: 13px; color: #777; line-height: 1.8; }
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!</span><span class="s2">DOCTYPE html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;</span><span class="s2">html </span><span class="s3">lang</span><span class="s1">="</span><span class="s4">zh-TW</span><span class="s1">"&gt;</span></p>
-<p class="p2"><span class="s1">&lt;</span><span class="s2">head</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s1">&lt;</span><span class="s5">meta </span><span class="s2">charset</span><span class="s1">="</span><span class="s4">UTF-8</span><span class="s1">"&gt;</span></p>
-<p class="p4"><span class="s1">&lt;</span><span class="s5">meta </span><span class="s3">name</span><span class="s1">="</span><span class="s2">viewport</span><span class="s1">"</span><span class="s5"> </span><span class="s3">content</span><span class="s1">="</span><span class="s2">width=device-width, initial-scale=1.0, maximum-scale=1.0</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s1">&lt;</span><span class="s5">title</span><span class="s1">&gt;</span><span class="s6">簡法甜點</span><span class="s2"> MOINS Pâtisserie</span><span class="s6">｜訂購表單</span><span class="s1">&lt;/</span><span class="s5">title</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s1">&lt;</span><span class="s5">script </span><span class="s3">src</span><span class="s1">="</span><span class="s2">https://static.line-scdn.net/liff/edge/2/sdk.js</span><span class="s1">"&gt;&lt;/</span><span class="s5">script</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;</span><span class="s2">style</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s2">*</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">box-sizing</span><span class="s1">:</span><span class="s7"> border-box</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">body</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-family</span><span class="s1">:</span><span class="s7"> </span><span class="s4">'Segoe UI'</span><span class="s1">,</span><span class="s7"> sans-serif</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fdf6f0</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #333</span><span class="s1">;</span><span class="s7"> </span><span class="s2">min-height</span><span class="s1">:</span><span class="s7"> </span><span class="s8">100</span><span class="s7">vh</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s5">.header</span><span class="s2"> </span><span class="s1">{</span><span class="s2"> </span><span class="s5">background</span><span class="s1">:</span><span class="s2"> </span><span class="s9">linear-gradient</span><span class="s1">(</span><span class="s8">135</span><span class="s2">deg</span><span class="s1">,</span><span class="s2"> #2c1a0e</span><span class="s1">,</span><span class="s2"> #6b3a2a</span><span class="s1">);</span><span class="s2"> </span><span class="s5">padding</span><span class="s1">:</span><span class="s2"> </span><span class="s8">28</span><span class="s2">px </span><span class="s8">20</span><span class="s2">px </span><span class="s8">20</span><span class="s2">px</span><span class="s1">;</span><span class="s2"> </span><span class="s5">text-align</span><span class="s1">:</span><span class="s2"> center</span><span class="s1">;</span><span class="s2"> </span><span class="s5">color</span><span class="s1">:</span><span class="s2"> #fff</span><span class="s1">;</span><span class="s2"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.header h1</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">18</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">letter-spacing</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.header h2</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">opacity</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0.75</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-top</span><span class="s1">:</span><span class="s7"> </span><span class="s8">4</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">400</span><span class="s1">;</span><span class="s7"> </span><span class="s2">letter-spacing</span><span class="s1">:</span><span class="s7"> </span><span class="s8">2</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2">.form-wrap</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">max-width</span><span class="s1">:</span><span class="s7"> </span><span class="s8">480</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s7"> auto</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">16</span><span class="s7">px </span><span class="s8">14</span><span class="s7">px </span><span class="s8">48</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2">.section</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-radius</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">18</span><span class="s7">px </span><span class="s8">16</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">box-shadow</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s7"> </span><span class="s8">2</span><span class="s7">px </span><span class="s8">8</span><span class="s7">px </span><span class="s9">rgba</span><span class="s1">(</span><span class="s8">0</span><span class="s1">,</span><span class="s8">0</span><span class="s1">,</span><span class="s8">0</span><span class="s1">,</span><span class="s8">0.06</span><span class="s1">);</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.section-title</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #6b3a2a</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">align-items</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">gap</span><span class="s1">:</span><span class="s7"> </span><span class="s8">6</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1.5</span><span class="s7">px solid #f3e9e3</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">10</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2">.field</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">13</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.field:last-child</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">label</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> block</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">600</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #777</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">5</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">text-transform</span><span class="s1">:</span><span class="s7"> uppercase</span><span class="s1">;</span><span class="s7"> </span><span class="s2">letter-spacing</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0.5</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.required::after</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">content</span><span class="s1">:</span><span class="s7"> </span><span class="s4">" *"</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #c0392b</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">input</span><span class="s1">,</span><span class="s2"> select</span><span class="s1">,</span><span class="s2"> textarea</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">width</span><span class="s1">:</span><span class="s7"> </span><span class="s8">100</span><span class="s7">%</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1.5</span><span class="s7">px solid #e8e0d8</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-radius</span><span class="s1">:</span><span class="s7"> </span><span class="s8">8</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">10</span><span class="s7">px </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #333</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fafaf8</span><span class="s1">;</span><span class="s7"> </span><span class="s2">transition</span><span class="s1">:</span><span class="s7"> border </span><span class="s8">0.2</span><span class="s7">s</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">input:focus</span><span class="s1">,</span><span class="s2"> select:focus</span><span class="s1">,</span><span class="s2"> textarea:focus</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">outline</span><span class="s1">:</span><span class="s7"> none</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-color</span><span class="s1">:</span><span class="s7"> #6b3a2a</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">textarea</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">resize</span><span class="s1">:</span><span class="s7"> vertical</span><span class="s1">;</span><span class="s7"> </span><span class="s2">min-height</span><span class="s1">:</span><span class="s7"> </span><span class="s8">80</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.err</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">11</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #c0392b</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-top</span><span class="s1">:</span><span class="s7"> </span><span class="s8">3</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> none</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">/* </span><span class="s6">商品卡片</span><span class="s2"> */</span></p>
-<p class="p2"><span class="s2">.product-card</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">border</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1.5</span><span class="s7">px solid #e8e0d8</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-radius</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">overflow</span><span class="s1">:</span><span class="s7"> hidden</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fafaf8</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.product-card:last-child</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.product-img</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">width</span><span class="s1">:</span><span class="s7"> </span><span class="s8">100</span><span class="s7">%</span><span class="s1">;</span><span class="s7"> </span><span class="s2">height</span><span class="s1">:</span><span class="s7"> </span><span class="s8">160</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">object-fit</span><span class="s1">:</span><span class="s7"> cover</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #f0e8e0</span><span class="s1">;</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">align-items</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">justify-content</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #bbb</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">13</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.product-img img</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">width</span><span class="s1">:</span><span class="s7"> </span><span class="s8">100</span><span class="s7">%</span><span class="s1">;</span><span class="s7"> </span><span class="s2">height</span><span class="s1">:</span><span class="s7"> </span><span class="s8">160</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">object-fit</span><span class="s1">:</span><span class="s7"> cover</span><span class="s1">;</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> block</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.product-info</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px </span><span class="s8">14</span><span class="s7">px </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.product-name</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #2c1a0e</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">2</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.product-desc</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">11</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #999</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">10</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.size-options</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">flex-direction</span><span class="s1">:</span><span class="s7"> column</span><span class="s1">;</span><span class="s7"> </span><span class="s2">gap</span><span class="s1">:</span><span class="s7"> </span><span class="s8">7</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.size-row</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">align-items</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">justify-content</span><span class="s1">:</span><span class="s7"> space-between</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">9</span><span class="s7">px </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1.5</span><span class="s7">px solid #e8e0d8</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-radius</span><span class="s1">:</span><span class="s7"> </span><span class="s8">8</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.size-row.has-item</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">border-color</span><span class="s1">:</span><span class="s7"> #6b3a2a</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fdf6f0</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.size-left</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">13</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">500</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #444</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.size-price</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #6b3a2a</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-right</span><span class="s1">:</span><span class="s7"> </span><span class="s8">10</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.qty-ctrl</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">align-items</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">gap</span><span class="s1">:</span><span class="s7"> </span><span class="s8">8</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.qty-btn</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">width</span><span class="s1">:</span><span class="s7"> </span><span class="s8">26</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">height</span><span class="s1">:</span><span class="s7"> </span><span class="s8">26</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-radius</span><span class="s1">:</span><span class="s7"> </span><span class="s8">50</span><span class="s7">%</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1.5</span><span class="s7">px solid #6b3a2a</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #6b3a2a</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">16</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">cursor</span><span class="s1">:</span><span class="s7"> pointer</span><span class="s1">;</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">align-items</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">justify-content</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">flex-shrink</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.qty-btn:active</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #6b3a2a</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.qty-num</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">min-width</span><span class="s1">:</span><span class="s7"> </span><span class="s8">20</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">text-align</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #2c1a0e</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">/* </span><span class="s6">單品</span><span class="s2"> */</span></p>
-<p class="p2"><span class="s2">.addon-row</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">align-items</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">justify-content</span><span class="s1">:</span><span class="s7"> space-between</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">10</span><span class="s7">px </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1.5</span><span class="s7">px solid #e8e0d8</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-radius</span><span class="s1">:</span><span class="s7"> </span><span class="s8">8</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">8</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.addon-row:last-child</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.addon-row.has-item</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">border-color</span><span class="s1">:</span><span class="s7"> #6b3a2a</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #fdf6f0</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.addon-name</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">13</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">500</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.addon-price-tag</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">11</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #999</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-top</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">/* </span><span class="s6">金額摘要</span><span class="s2"> */</span></p>
-<p class="p2"><span class="s2">.summary</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #2c1a0e</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-radius</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">18</span><span class="s7">px </span><span class="s8">16</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.summary-title</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">13</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #f0d5b8</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">letter-spacing</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.s-row</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">justify-content</span><span class="s1">:</span><span class="s7"> space-between</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">3</span><span class="s7">px </span><span class="s8">0</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #c4a882</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p5"><span class="s5">.s-divider</span><span class="s2"> </span><span class="s1">{</span><span class="s2"> </span><span class="s5">border</span><span class="s1">:</span><span class="s2"> none</span><span class="s1">;</span><span class="s2"> </span><span class="s5">border-top</span><span class="s1">:</span><span class="s2"> </span><span class="s8">1</span><span class="s2">px dashed #4a3020</span><span class="s1">;</span><span class="s2"> </span><span class="s5">margin</span><span class="s1">:</span><span class="s2"> </span><span class="s8">10</span><span class="s2">px </span><span class="s8">0</span><span class="s1">;</span><span class="s2"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.s-total</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> flex</span><span class="s1">;</span><span class="s7"> </span><span class="s2">justify-content</span><span class="s1">:</span><span class="s7"> space-between</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">17</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2">.submit-btn</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">width</span><span class="s1">:</span><span class="s7"> </span><span class="s8">100</span><span class="s7">%</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">16</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> </span><span class="s9">linear-gradient</span><span class="s1">(</span><span class="s8">135</span><span class="s7">deg</span><span class="s1">,</span><span class="s7"> #2c1a0e</span><span class="s1">,</span><span class="s7"> #6b3a2a</span><span class="s1">);</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #fff</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border</span><span class="s1">:</span><span class="s7"> none</span><span class="s1">;</span><span class="s7"> </span><span class="s2">border-radius</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">15</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">cursor</span><span class="s1">:</span><span class="s7"> pointer</span><span class="s1">;</span><span class="s7"> </span><span class="s2">letter-spacing</span><span class="s1">:</span><span class="s7"> </span><span class="s8">2</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">box-shadow</span><span class="s1">:</span><span class="s7"> </span><span class="s8">0</span><span class="s7"> </span><span class="s8">4</span><span class="s7">px </span><span class="s8">14</span><span class="s7">px </span><span class="s9">rgba</span><span class="s1">(</span><span class="s8">107</span><span class="s1">,</span><span class="s8">58</span><span class="s1">,</span><span class="s8">42</span><span class="s1">,</span><span class="s8">0.35</span><span class="s1">);</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.submit-btn:disabled</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">background</span><span class="s1">:</span><span class="s7"> #bbb</span><span class="s1">;</span><span class="s7"> </span><span class="s2">box-shadow</span><span class="s1">:</span><span class="s7"> none</span><span class="s1">;</span><span class="s7"> </span><span class="s2">cursor</span><span class="s1">:</span><span class="s7"> not-allowed</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2">.loading</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">text-align</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">40</span><span class="s7">px </span><span class="s8">20</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> none</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.loading p</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #999</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">14</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-top</span><span class="s1">:</span><span class="s7"> </span><span class="s8">12</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p5"><span class="s5">.spinner</span><span class="s2"> </span><span class="s1">{</span><span class="s2"> </span><span class="s5">width</span><span class="s1">:</span><span class="s2"> </span><span class="s8">40</span><span class="s2">px</span><span class="s1">;</span><span class="s2"> </span><span class="s5">height</span><span class="s1">:</span><span class="s2"> </span><span class="s8">40</span><span class="s2">px</span><span class="s1">;</span><span class="s2"> </span><span class="s5">border</span><span class="s1">:</span><span class="s2"> </span><span class="s8">3</span><span class="s2">px solid #f0e8e0</span><span class="s1">;</span><span class="s2"> </span><span class="s5">border-top-color</span><span class="s1">:</span><span class="s2"> #6b3a2a</span><span class="s1">;</span><span class="s2"> </span><span class="s5">border-radius</span><span class="s1">:</span><span class="s2"> </span><span class="s8">50</span><span class="s2">%</span><span class="s1">;</span><span class="s2"> </span><span class="s5">animation</span><span class="s1">:</span><span class="s2"> spin </span><span class="s8">0.8</span><span class="s2">s linear infinite</span><span class="s1">;</span><span class="s2"> </span><span class="s5">margin</span><span class="s1">:</span><span class="s2"> </span><span class="s8">0</span><span class="s2"> auto</span><span class="s1">;</span><span class="s2"> </span><span class="s1">}</span></p>
-<p class="p7"><span class="s2">@keyframes spin</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s5">to</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s5">transform</span><span class="s1">:</span><span class="s7"> </span><span class="s9">rotate</span><span class="s1">(</span><span class="s8">360</span><span class="s7">deg</span><span class="s1">);</span><span class="s7"> </span><span class="s1">}</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2">.success-screen</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">display</span><span class="s1">:</span><span class="s7"> none</span><span class="s1">;</span><span class="s7"> </span><span class="s2">text-align</span><span class="s1">:</span><span class="s7"> center</span><span class="s1">;</span><span class="s7"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s7"> </span><span class="s8">60</span><span class="s7">px </span><span class="s8">24</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.success-icon</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">60</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">16</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.success-title</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">20</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">font-weight</span><span class="s1">:</span><span class="s7"> </span><span class="s8">700</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #2c1a0e</span><span class="s1">;</span><span class="s7"> </span><span class="s2">margin-bottom</span><span class="s1">:</span><span class="s7"> </span><span class="s8">10</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s2">.success-msg</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s2">font-size</span><span class="s1">:</span><span class="s7"> </span><span class="s8">13</span><span class="s7">px</span><span class="s1">;</span><span class="s7"> </span><span class="s2">color</span><span class="s1">:</span><span class="s7"> #777</span><span class="s1">;</span><span class="s7"> </span><span class="s2">line-height</span><span class="s1">:</span><span class="s7"> </span><span class="s8">1.8</span><span class="s1">;</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p2"><span class="s1">&lt;/</span><span class="s2">style</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/</span><span class="s2">head</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;</span><span class="s2">body</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">&lt;!-- </span><span class="s6">載入中</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">loading</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">loadingScreen</span><span class="s1">"&gt;</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s2">="</span><span class="s4">spinner</span><span class="s2">"&gt;&lt;/</span><span class="s5">div</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;</span><span class="s5">p</span><span class="s1">&gt;</span><span class="s6">載入商品資訊中⋯</span><span class="s1">&lt;/</span><span class="s5">p</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">&lt;!-- </span><span class="s6">表單</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">id</span><span class="s1">="</span><span class="s2">formScreen</span><span class="s1">"</span><span class="s5"> </span><span class="s3">style</span><span class="s1">="</span><span class="s2">display:none</span><span class="s1">"&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">header</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">h1</span><span class="s1">&gt;</span><span class="s6">簡法甜點</span><span class="s1">&lt;/</span><span class="s5">h1</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">h2</span><span class="s1">&gt;</span><span class="s2">MOINS Pâtisserie</span><span class="s1">&lt;/</span><span class="s5">h2</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">form-wrap</span><span class="s1">"&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;!-- </span><span class="s6">基本資料</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">section</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">section-title</span><span class="s1">"&gt;</span><span class="s10">👤</span><span class="s2"> </span><span class="s6">基本資料</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s2">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s2">="</span><span class="s4">field</span><span class="s2">"&gt;&lt;</span><span class="s5">label </span><span class="s3">class</span><span class="s2">="</span><span class="s4">required</span><span class="s2">"&gt;</span><span class="s11">訂購姓名</span><span class="s2">&lt;/</span><span class="s5">label</span><span class="s2">&gt;&lt;</span><span class="s5">input </span><span class="s3">type</span><span class="s2">="</span><span class="s4">text</span><span class="s2">"</span><span class="s5"> </span><span class="s3">id</span><span class="s2">="</span><span class="s4">name</span><span class="s2">"</span><span class="s5"> </span><span class="s3">placeholder</span><span class="s2">="</span><span class="s12">請輸入姓名</span><span class="s2">"&gt;&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s2">="</span><span class="s4">err</span><span class="s2">"</span><span class="s5"> </span><span class="s3">id</span><span class="s2">="</span><span class="s4">err-name</span><span class="s2">"&gt;</span><span class="s11">請填寫姓名</span><span class="s2">&lt;/</span><span class="s5">div</span><span class="s2">&gt;&lt;/</span><span class="s5">div</span><span class="s2">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">field</span><span class="s1">"&gt;&lt;</span><span class="s5">label </span><span class="s3">class</span><span class="s1">="</span><span class="s2">required</span><span class="s1">"&gt;</span><span class="s11">聯絡電話</span><span class="s1">&lt;/</span><span class="s5">label</span><span class="s1">&gt;&lt;</span><span class="s5">input </span><span class="s3">type</span><span class="s1">="</span><span class="s2">tel</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">phone</span><span class="s1">"</span><span class="s5"> </span><span class="s3">placeholder</span><span class="s1">="</span><span class="s6">請輸入手機號碼</span><span class="s1">"&gt;&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">err</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">err-phone</span><span class="s1">"&gt;</span><span class="s11">請填寫電話</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">field</span><span class="s1">"&gt;&lt;</span><span class="s5">label </span><span class="s3">class</span><span class="s1">="</span><span class="s2">required</span><span class="s1">"&gt;</span><span class="s11">取貨日期</span><span class="s1">&lt;/</span><span class="s5">label</span><span class="s1">&gt;&lt;</span><span class="s5">input </span><span class="s3">type</span><span class="s1">="</span><span class="s2">date</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">pickupDate</span><span class="s1">"&gt;&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">err</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">err-date</span><span class="s1">"&gt;</span><span class="s11">請選擇日期</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">field</span><span class="s1">"&gt;&lt;</span><span class="s2">label </span><span class="s3">class</span><span class="s1">="</span><span class="s4">required</span><span class="s1">"&gt;</span><span class="s11">預計取貨時間</span><span class="s1">&lt;/</span><span class="s2">label</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;</span><span class="s5">select </span><span class="s3">id</span><span class="s1">="</span><span class="s2">pickupTime</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s5">option </span><span class="s3">value</span><span class="s1">=""&gt;</span><span class="s6">請選擇時間</span><span class="s1">&lt;/</span><span class="s5">option</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s7"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s2">option</span><span class="s1">&gt;</span><span class="s7">12:00</span><span class="s1">&lt;/</span><span class="s2">option</span><span class="s1">&gt;&lt;</span><span class="s2">option</span><span class="s1">&gt;</span><span class="s7">13:00</span><span class="s1">&lt;/</span><span class="s2">option</span><span class="s1">&gt;&lt;</span><span class="s2">option</span><span class="s1">&gt;</span><span class="s7">14:00</span><span class="s1">&lt;/</span><span class="s2">option</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s7"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s2">option</span><span class="s1">&gt;</span><span class="s7">15:00</span><span class="s1">&lt;/</span><span class="s2">option</span><span class="s1">&gt;&lt;</span><span class="s2">option</span><span class="s1">&gt;</span><span class="s7">16:00</span><span class="s1">&lt;/</span><span class="s2">option</span><span class="s1">&gt;&lt;</span><span class="s2">option</span><span class="s1">&gt;</span><span class="s7">17:00</span><span class="s1">&lt;/</span><span class="s2">option</span><span class="s1">&gt;&lt;</span><span class="s2">option</span><span class="s1">&gt;</span><span class="s7">18:00</span><span class="s1">&lt;/</span><span class="s2">option</span><span class="s1">&gt;&lt;</span><span class="s2">option</span><span class="s1">&gt;</span><span class="s7">19:00</span><span class="s1">&lt;/</span><span class="s2">option</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;/</span><span class="s5">select</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">err</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s4">err-time</span><span class="s1">"&gt;</span><span class="s6">請選擇時間</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;!-- </span><span class="s6">蛋糕商品（動態產生）</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">section</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">cakeSection</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">section-title</span><span class="s1">"&gt;</span><span class="s10">🎂</span><span class="s2"> </span><span class="s6">蛋糕選購</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">id</span><span class="s1">="</span><span class="s2">cakeProducts</span><span class="s1">"&gt;&lt;</span><span class="s5">div </span><span class="s3">style</span><span class="s1">="</span><span class="s2">color:#bbb;font-size:13px;text-align:center;padding:20px</span><span class="s1">"&gt;</span><span class="s11">載入中⋯</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;!-- </span><span class="s6">單品加購</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">section</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">section-title</span><span class="s1">"&gt;</span><span class="s10">🍮</span><span class="s2"> </span><span class="s6">單品加購</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">id</span><span class="s1">="</span><span class="s2">singleProducts</span><span class="s1">"&gt;&lt;</span><span class="s5">div </span><span class="s3">style</span><span class="s1">="</span><span class="s2">color:#bbb;font-size:13px;text-align:center;padding:20px</span><span class="s1">"&gt;</span><span class="s11">載入中⋯</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;!-- </span><span class="s6">配件加購</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">section</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">section-title</span><span class="s1">"&gt;</span><span class="s10">🛍️</span><span class="s2"> </span><span class="s6">配件加購</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">field</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;</span><span class="s5">label</span><span class="s1">&gt;</span><span class="s6">餐具加購（</span><span class="s2">NT$30 / </span><span class="s6">組）</span><span class="s1">&lt;/</span><span class="s5">label</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;</span><span class="s5">select </span><span class="s3">id</span><span class="s1">="</span><span class="s2">plate</span><span class="s1">"</span><span class="s5"> </span><span class="s3">onchange</span><span class="s1">="</span><span class="s2">updateSummary()</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s5">option </span><span class="s3">value</span><span class="s1">="</span><span class="s4">0</span><span class="s1">"&gt;</span><span class="s6">不加購</span><span class="s1">&lt;/</span><span class="s5">option</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s5">option </span><span class="s3">value</span><span class="s1">="</span><span class="s4">1</span><span class="s1">"&gt;</span><span class="s2">1</span><span class="s6">組</span><span class="s2"> NT$30</span><span class="s1">&lt;/</span><span class="s5">option</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s5">option </span><span class="s3">value</span><span class="s1">="</span><span class="s4">2</span><span class="s1">"&gt;</span><span class="s2">2</span><span class="s6">組</span><span class="s2"> NT$60</span><span class="s1">&lt;/</span><span class="s5">option</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s5">option </span><span class="s3">value</span><span class="s1">="</span><span class="s4">3</span><span class="s1">"&gt;</span><span class="s2">3</span><span class="s6">組</span><span class="s2"> NT$90</span><span class="s1">&lt;/</span><span class="s5">option</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;/</span><span class="s5">select</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">addon-row</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">bag-row</span><span class="s1">"&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;</span><span class="s5">div</span><span class="s1">&gt;&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">addon-name</span><span class="s1">"&gt;</span><span class="s11">保冷袋加購</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">addon-price-tag</span><span class="s1">"&gt;</span><span class="s7">NT$100 / </span><span class="s11">個</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">qty-ctrl</span><span class="s1">"&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s5">button </span><span class="s3">class</span><span class="s1">="</span><span class="s2">qty-btn</span><span class="s1">"</span><span class="s5"> </span><span class="s3">onclick</span><span class="s1">="</span><span class="s2">changeAddon('bag',-1)</span><span class="s1">"&gt;</span><span class="s7">−</span><span class="s1">&lt;/</span><span class="s5">button</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s5">span </span><span class="s3">class</span><span class="s1">="</span><span class="s2">qty-num</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">qty-bag</span><span class="s1">"&gt;</span><span class="s7">0</span><span class="s1">&lt;/</span><span class="s5">span</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">          </span></span><span class="s1">&lt;</span><span class="s5">button </span><span class="s3">class</span><span class="s1">="</span><span class="s2">qty-btn</span><span class="s1">"</span><span class="s5"> </span><span class="s3">onclick</span><span class="s1">="</span><span class="s2">changeAddon('bag',1)</span><span class="s1">"&gt;</span><span class="s7">+</span><span class="s1">&lt;/</span><span class="s5">button</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;!-- </span><span class="s6">備註</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">section</span><span class="s1">"&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">section-title</span><span class="s1">"&gt;</span><span class="s13">📝</span><span class="s7"> </span><span class="s11">備註</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">textarea </span><span class="s3">id</span><span class="s1">="</span><span class="s2">note</span><span class="s1">"</span><span class="s5"> </span><span class="s3">placeholder</span><span class="s1">="</span><span class="s6">客製化文字、特殊需求等（選填）</span><span class="s1">"&gt;&lt;/</span><span class="s5">textarea</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;!-- </span><span class="s6">金額摘要</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">summary</span><span class="s1">"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">summary-title</span><span class="s1">"&gt;</span><span class="s10">💰</span><span class="s2"> </span><span class="s6">訂單金額摘要</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">id</span><span class="s1">="</span><span class="s2">summaryItems</span><span class="s1">"&gt;&lt;</span><span class="s5">div </span><span class="s3">style</span><span class="s1">="</span><span class="s2">color:#6a5040;font-size:12px;text-align:center</span><span class="s1">"&gt;</span><span class="s11">尚未選擇任何品項</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s5">hr </span><span class="s3">class</span><span class="s1">="</span><span class="s2">s-divider</span><span class="s1">"&gt;</span></p>
-<p class="p2"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">s-total</span><span class="s1">"&gt;&lt;</span><span class="s2">span</span><span class="s1">&gt;</span><span class="s11">總金額</span><span class="s1">&lt;/</span><span class="s2">span</span><span class="s1">&gt;&lt;</span><span class="s2">span </span><span class="s3">id</span><span class="s1">="</span><span class="s4">summaryTotal</span><span class="s1">"&gt;</span><span class="s7">NT$0</span><span class="s1">&lt;/</span><span class="s2">span</span><span class="s1">&gt;&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;</span><span class="s5">button </span><span class="s3">class</span><span class="s1">="</span><span class="s2">submit-btn</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">submitBtn</span><span class="s1">"</span><span class="s5"> </span><span class="s3">onclick</span><span class="s1">="</span><span class="s2">submitForm()</span><span class="s1">"&gt;</span><span class="s11">確認送出訂單</span><span class="s7"> </span><span class="s13">🎂</span><span class="s1">&lt;/</span><span class="s5">button</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">&lt;!-- </span><span class="s6">成功畫面</span><span class="s2"> --&gt;</span></p>
-<p class="p4"><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">success-screen</span><span class="s1">"</span><span class="s5"> </span><span class="s3">id</span><span class="s1">="</span><span class="s2">successScreen</span><span class="s1">"&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">success-icon</span><span class="s1">"&gt;</span><span class="s13">🎉</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s2">success-title</span><span class="s1">"&gt;</span><span class="s11">訂單已送出！</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;</span><span class="s5">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">success-msg</span><span class="s1">"&gt;</span><span class="s6">感謝您訂購簡法甜點</span><span class="s2"> </span><span class="s10">😊</span><span class="s1">&lt;</span><span class="s5">br</span><span class="s1">&gt;&lt;</span><span class="s5">br</span><span class="s1">&gt;</span><span class="s6">我們將透過</span><span class="s2"> LINE </span><span class="s6">發送</span><span class="s1">&lt;</span><span class="s5">br</span><span class="s1">&gt;</span><span class="s6">訂單明細與匯款資訊給您</span><span class="s1">&lt;</span><span class="s5">br</span><span class="s1">&gt;&lt;</span><span class="s5">br</span><span class="s1">&gt;</span><span class="s6">請完成匯款後於</span><span class="s2"> LINE </span><span class="s6">回傳</span><span class="s1">&lt;</span><span class="s5">br</span><span class="s1">&gt;</span><span class="s6">匯款截圖或帳號後五碼</span><span class="s1">&lt;/</span><span class="s5">div</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p2"><span class="s1">&lt;</span><span class="s2">script</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p9"><span class="s14">// </span><span class="s2">設定區（部署後填入）</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p4"><span class="s15">const</span><span class="s7"> </span><span class="s8">LIFF_ID</span><span class="s7"> = </span><span class="s2">"</span><span class="s6">你的</span><span class="s2">LIFF_ID"</span><span class="s1">;</span></p>
-<p class="p4"><span class="s15">const</span><span class="s7"> </span><span class="s8">GAS_URL</span><span class="s7"> = </span><span class="s2">"https://script.google.com/macros/s/AKfycbz-tLLmvmOGI0kocTaWRnT5ye3erx8rQoU5qDDAQ6GWTqLKU4OK3mxOvhP73C9NDsXk/exec"</span><span class="s1">;</span></p>
-<p class="p4"><span class="s15">const</span><span class="s7"> </span><span class="s8">SHEET_API_URL</span><span class="s7"> = </span><span class="s2">"https://script.google.com/macros/s/AKfycbxV28fHfF8Z0yAGxextrDNcG7vZ05NjSyJ6ll7be-7Nt4mxvPsMeXQtJh2R_2j3JeDa/exec"</span><span class="s1">;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p9"><span class="s14">// </span><span class="s2">全域狀態</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p5"><span class="s15">let</span><span class="s2"> lineUID = </span><span class="s4">""</span><span class="s1">;</span></p>
-<p class="p5"><span class="s15">let</span><span class="s2"> products = </span><span class="s1">[];</span><span class="s2"> <span class="Apple-converted-space">        </span></span><span class="s16">// </span><span class="s17">從試算表讀取的商品</span></p>
-<p class="p1"><span class="s15">const</span><span class="s7"> cakeQty = </span><span class="s1">{};</span><span class="s7"><span class="Apple-converted-space">        </span></span><span class="s2">// { "</span><span class="s6">商品</span><span class="s2">ID_</span><span class="s6">尺寸</span><span class="s2">": </span><span class="s6">數量</span><span class="s2"> }</span></p>
-<p class="p5"><span class="s15">const</span><span class="s2"> addonQty = </span><span class="s1">{</span><span class="s2"> </span><span class="s5">bag</span><span class="s2">: </span><span class="s8">0</span><span class="s2"> </span><span class="s1">};</span></p>
-<p class="p5"><span class="s15">const</span><span class="s2"> singleQty = </span><span class="s1">{};</span><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s16">// { "</span><span class="s17">商品</span><span class="s16">ID": </span><span class="s17">數量</span><span class="s16"> }</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p1"><span class="s2">// </span><span class="s6">初始化</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p4"><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s2">"loadingScreen"</span><span class="s1">).</span><span class="s7">style</span><span class="s1">.</span><span class="s7">display = </span><span class="s2">"block"</span><span class="s1">;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p7"><span class="s2">async</span><span class="s7"> </span><span class="s2">function</span><span class="s7"> </span><span class="s9">init</span><span class="s1">()</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p9"><span class="s19"><span class="Apple-converted-space">  </span></span><span class="s14">// </span><span class="s2">設定最小日期（明天）</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s2"> d = </span><span class="s15">new</span><span class="s2"> </span><span class="s18">Date</span><span class="s1">();</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span>d</span><span class="s1">.</span><span class="s2">setDate</span><span class="s1">(</span><span class="s7">d</span><span class="s1">.</span><span class="s2">getDate</span><span class="s1">()</span><span class="s7"> + </span><span class="s8">1</span><span class="s1">);</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"pickupDate"</span><span class="s1">).</span><span class="s7">min = d</span><span class="s1">.</span><span class="s2">toISOString</span><span class="s1">().</span><span class="s2">split</span><span class="s1">(</span><span class="s4">"T"</span><span class="s1">)[</span><span class="s8">0</span><span class="s1">];</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// LIFF </span><span class="s6">初始化</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">try</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">await</span><span class="s2"> liff</span><span class="s1">.</span><span class="s9">init</span><span class="s1">({</span><span class="s2"> </span><span class="s5">liffId</span><span class="s2">: </span><span class="s8">LIFF_ID</span><span class="s2"> </span><span class="s1">});</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">liff</span><span class="s1">.</span><span class="s9">isLoggedIn</span><span class="s1">())</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s15">const</span><span class="s2"> p = </span><span class="s15">await</span><span class="s2"> liff</span><span class="s1">.</span><span class="s9">getProfile</span><span class="s1">();</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span>lineUID = p</span><span class="s1">.</span><span class="s2">userId</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">}</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">}</span><span class="s7"> </span><span class="s15">catch</span><span class="s2">(</span><span class="s7">e</span><span class="s2">)</span><span class="s7"> </span><span class="s2">{</span><span class="s7"> </span><span class="s18">console</span><span class="s2">.</span><span class="s9">log</span><span class="s2">(</span><span class="s4">"LIFF:"</span><span class="s2">,</span><span class="s7"> e</span><span class="s2">);</span><span class="s7"> </span><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// </span><span class="s6">讀取商品</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s15">await</span><span class="s7"> </span><span class="s2">loadProducts</span><span class="s1">();</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s2">"loadingScreen"</span><span class="s1">).</span><span class="s7">style</span><span class="s1">.</span><span class="s7">display = </span><span class="s2">"none"</span><span class="s1">;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s2">"formScreen"</span><span class="s1">).</span><span class="s7">style</span><span class="s1">.</span><span class="s7">display = </span><span class="s2">"block"</span><span class="s1">;</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p1"><span class="s2">// </span><span class="s6">讀取商品（從</span><span class="s2"> Google Apps Script</span><span class="s6">）</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p7"><span class="s2">async</span><span class="s7"> </span><span class="s2">function</span><span class="s7"> </span><span class="s9">loadProducts</span><span class="s1">()</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">try</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p11"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s15">const</span><span class="s7"> res = </span><span class="s15">await</span><span class="s7"> </span><span class="s9">fetch</span><span class="s1">(</span><span class="s2">SHEET_API_URL</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">const</span><span class="s2"> data = </span><span class="s15">await</span><span class="s2"> res</span><span class="s1">.</span><span class="s9">json</span><span class="s1">();</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>products = data</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">}</span><span class="s2"> </span><span class="s15">catch</span><span class="s1">(</span><span class="s2">e</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p9"><span class="s19"><span class="Apple-converted-space">    </span></span><span class="s14">// </span><span class="s2">若讀取失敗，使用預設商品</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">    </span>products = </span><span class="s2">getDefaultProducts</span><span class="s1">();</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">}</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">renderProducts</span><span class="s1">();</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p10"><span class="s15">function</span><span class="s7"> </span><span class="s2">getDefaultProducts</span><span class="s1">()</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p7"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">return</span><span class="s7"> </span><span class="s1">[</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">{</span><span class="s7"> </span><span class="s5">id</span><span class="s7">:</span><span class="s2">"A"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">type</span><span class="s7">:</span><span class="s2">"cake"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">name</span><span class="s7">:</span><span class="s2">"</span><span class="s6">香草聖多諾黑</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">desc</span><span class="s7">:</span><span class="s2">"</span><span class="s6">不建議隔夜</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">img</span><span class="s7">:</span><span class="s2">""</span><span class="s1">,</span><span class="s7"> </span><span class="s5">sizes</span><span class="s7">:</span><span class="s1">[</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s2"> </span><span class="s5">size</span><span class="s2">:</span><span class="s4">"4</span><span class="s12">吋（約</span><span class="s4">2-3</span><span class="s12">人）</span><span class="s4">"</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">:</span><span class="s8">890</span><span class="s2"> </span><span class="s1">},</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s2"> </span><span class="s5">size</span><span class="s2">:</span><span class="s4">"6</span><span class="s12">吋（約</span><span class="s4">6-8</span><span class="s12">人）</span><span class="s4">"</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">:</span><span class="s8">1380</span><span class="s2"> </span><span class="s1">},</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s7"> </span><span class="s5">size</span><span class="s7">:</span><span class="s2">"8</span><span class="s6">吋（約</span><span class="s2">7-10</span><span class="s6">人）</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">price</span><span class="s7">:</span><span class="s8">1880</span><span class="s7"> </span><span class="s1">},</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s2"> </span><span class="s5">size</span><span class="s2">:</span><span class="s4">"7</span><span class="s12">吋愛心造型</span><span class="s4">"</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">:</span><span class="s8">1880</span><span class="s2"> </span><span class="s1">}</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">]},</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">{</span><span class="s7"> </span><span class="s5">id</span><span class="s7">:</span><span class="s2">"B"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">type</span><span class="s7">:</span><span class="s2">"cake"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">name</span><span class="s7">:</span><span class="s2">"</span><span class="s6">季節花束夏洛特－蜜桃馬鞭草</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">desc</span><span class="s7">:</span><span class="s2">"</span><span class="s20">※</span><span class="s6">草莓供應結束※</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">img</span><span class="s7">:</span><span class="s2">""</span><span class="s1">,</span><span class="s7"> </span><span class="s5">sizes</span><span class="s7">:</span><span class="s1">[</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s2"> </span><span class="s5">size</span><span class="s2">:</span><span class="s4">"5</span><span class="s12">吋（約</span><span class="s4">3-4</span><span class="s12">人）</span><span class="s4">"</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">:</span><span class="s8">1420</span><span class="s2"> </span><span class="s1">},</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s2"> </span><span class="s5">size</span><span class="s2">:</span><span class="s4">"6</span><span class="s12">吋（約</span><span class="s4">6-8</span><span class="s12">人）</span><span class="s4">"</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">:</span><span class="s8">1880</span><span class="s2"> </span><span class="s1">},</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s7"> </span><span class="s5">size</span><span class="s7">:</span><span class="s2">"8</span><span class="s6">吋（約</span><span class="s2">7-10</span><span class="s6">人）</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">price</span><span class="s7">:</span><span class="s8">2760</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">]},</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">{</span><span class="s7"> </span><span class="s5">id</span><span class="s7">:</span><span class="s2">"C"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">type</span><span class="s7">:</span><span class="s2">"cake"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">name</span><span class="s7">:</span><span class="s2">"</span><span class="s6">季節夏洛特－蜜桃馬鞭草</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">desc</span><span class="s7">:</span><span class="s2">"</span><span class="s20">※</span><span class="s6">草莓供應結束※</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">img</span><span class="s7">:</span><span class="s2">""</span><span class="s1">,</span><span class="s7"> </span><span class="s5">sizes</span><span class="s7">:</span><span class="s1">[</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s2"> </span><span class="s5">size</span><span class="s2">:</span><span class="s4">"4</span><span class="s12">吋（約</span><span class="s4">2-3</span><span class="s12">人）</span><span class="s4">"</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">:</span><span class="s8">890</span><span class="s2"> </span><span class="s1">},</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s2"> </span><span class="s5">size</span><span class="s2">:</span><span class="s4">"6</span><span class="s12">吋（約</span><span class="s4">6-8</span><span class="s12">人）</span><span class="s4">"</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">:</span><span class="s8">1380</span><span class="s2"> </span><span class="s1">},</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s1">{</span><span class="s7"> </span><span class="s5">size</span><span class="s7">:</span><span class="s2">"8</span><span class="s6">吋（約</span><span class="s2">7-10</span><span class="s6">人）</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">price</span><span class="s7">:</span><span class="s8">1880</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">]},</span></p>
-<p class="p2"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">{</span><span class="s7"> </span><span class="s2">id</span><span class="s7">:</span><span class="s4">"D"</span><span class="s1">,</span><span class="s7"> </span><span class="s2">type</span><span class="s7">:</span><span class="s4">"single"</span><span class="s1">,</span><span class="s7"> </span><span class="s2">name</span><span class="s7">:</span><span class="s4">"</span><span class="s12">香草可麗露</span><span class="s4">"</span><span class="s1">,</span><span class="s7"> </span><span class="s2">desc</span><span class="s7">:</span><span class="s4">""</span><span class="s1">,</span><span class="s7"> </span><span class="s2">price</span><span class="s7">:</span><span class="s8">80</span><span class="s1">,</span><span class="s7"> </span><span class="s2">unit</span><span class="s7">:</span><span class="s4">"</span><span class="s12">顆</span><span class="s4">"</span><span class="s7"> </span><span class="s1">},</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s1">{</span><span class="s7"> </span><span class="s5">id</span><span class="s7">:</span><span class="s2">"E"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">type</span><span class="s7">:</span><span class="s2">"single"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">name</span><span class="s7">:</span><span class="s2">"</span><span class="s6">香香焦糖嫩布丁</span><span class="s2">"</span><span class="s1">,</span><span class="s7"> </span><span class="s5">desc</span><span class="s7">:</span><span class="s2">""</span><span class="s1">,</span><span class="s7"> </span><span class="s5">price</span><span class="s7">:</span><span class="s8">100</span><span class="s1">,</span><span class="s7"> </span><span class="s5">unit</span><span class="s7">:</span><span class="s2">"</span><span class="s6">杯</span><span class="s2">"</span><span class="s7"> </span><span class="s1">}</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">];</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p9"><span class="s14">// </span><span class="s2">渲染商品</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p10"><span class="s15">function</span><span class="s7"> </span><span class="s2">renderProducts</span><span class="s1">()</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s2"> cakes = products</span><span class="s1">.</span><span class="s9">filter</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; p</span><span class="s1">.</span><span class="s2">type === </span><span class="s4">"cake"</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s2"> singles = products</span><span class="s1">.</span><span class="s9">filter</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; p</span><span class="s1">.</span><span class="s2">type === </span><span class="s4">"single"</span><span class="s1">);</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// </span><span class="s6">蛋糕</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">let</span><span class="s2"> cakeHTML = </span><span class="s4">""</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>cakes</span><span class="s1">.</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">const</span><span class="s2"> imgHTML = p</span><span class="s1">.</span><span class="s2">img</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span>? </span><span class="s2">`&lt;div class="product-img"&gt;&lt;img src="${p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='</span><span class="s10">🎂</span><span class="s2">'"&gt;&lt;/div&gt;`</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span>: </span><span class="s2">`&lt;div class="product-img" style="height:80px;font-size:28px;display:flex;align-items:center;justify-content:center"&gt;</span><span class="s10">🎂</span><span class="s2">&lt;/div&gt;`</span><span class="s1">;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">let</span><span class="s2"> sizesHTML = </span><span class="s4">""</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>p</span><span class="s1">.</span><span class="s2">sizes</span><span class="s1">.</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">s</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s15">const</span><span class="s7"> key = </span><span class="s2">`${p.id}_${s.size}`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span>cakeQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> = cakeQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> || </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span>sizesHTML += </span><span class="s4">`</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">        </span>&lt;div class="size-row" id="row-${key}"&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>&lt;span class="size-left"&gt;${s.size}&lt;/span&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span>&lt;div style="display:flex;align-items:center"&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">            </span>&lt;span class="size-price"&gt;NT$${s.price.toLocaleString()}&lt;/span&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div class="qty-ctrl"&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">              </span>&lt;button class="qty-btn" onclick="changeCake('${key}',-1,${s.price})"&gt;−&lt;/button&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">              </span>&lt;span class="qty-num" id="qty-${key}"&gt;0&lt;/span&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">              </span>&lt;button class="qty-btn" onclick="changeCake('${key}',1,${s.price})"&gt;+&lt;/button&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">});</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>cakeHTML += </span><span class="s4">`</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span>&lt;div class="product-card"&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">        </span>${imgHTML}</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>&lt;div class="product-info"&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>&lt;div class="product-name"&gt;${p.name}&lt;/div&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>${p.desc ? `&lt;div class="product-desc"&gt;${p.desc}&lt;/div&gt;` : ""}</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>&lt;div class="size-options"&gt;${sizesHTML}&lt;/div&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/div&gt;`</span><span class="s1">;</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">});</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s4">"cakeProducts"</span><span class="s1">).</span><span class="s2">innerHTML = cakeHTML</span><span class="s1">;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// </span><span class="s6">單品</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">let</span><span class="s2"> singleHTML = </span><span class="s4">""</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>singles</span><span class="s1">.</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>singleQty</span><span class="s1">[</span><span class="s2">p</span><span class="s1">.</span><span class="s2">id</span><span class="s1">]</span><span class="s2"> = </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>singleHTML += </span><span class="s4">`</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">      </span>&lt;div class="addon-row" id="single-row-${p.id}"&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>&lt;div class="addon-name"&gt;${p.name}&lt;/div&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>&lt;div class="addon-price-tag"&gt;NT$${p.price} / ${p.unit}&lt;/div&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>&lt;div class="qty-ctrl"&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>&lt;button class="qty-btn" onclick="changeSingle('${p.id}',-1)"&gt;−&lt;/button&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>&lt;span class="qty-num" id="qty-single-${p.id}"&gt;0&lt;/span&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">          </span>&lt;button class="qty-btn" onclick="changeSingle('${p.id}',1)"&gt;+&lt;/button&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/div&gt;`</span><span class="s1">;</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">});</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s4">"singleProducts"</span><span class="s1">).</span><span class="s2">innerHTML = singleHTML</span><span class="s1">;</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p9"><span class="s14">// </span><span class="s2">數量控制</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p10"><span class="s15">function</span><span class="s7"> </span><span class="s2">changeCake</span><span class="s1">(</span><span class="s21">key</span><span class="s1">,</span><span class="s21"> delta</span><span class="s1">)</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>cakeQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> = </span><span class="s18">Math</span><span class="s1">.</span><span class="s9">max</span><span class="s1">(</span><span class="s8">0</span><span class="s1">,</span><span class="s2"> </span><span class="s1">(</span><span class="s2">cakeQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> || </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> + delta</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s4">`qty-${key}`</span><span class="s1">).</span><span class="s2">textContent = cakeQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">];</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s7"> row = </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">`row-${key}`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">row</span><span class="s1">)</span><span class="s2"> row</span><span class="s1">.</span><span class="s2">className = </span><span class="s4">"size-row"</span><span class="s2"> + </span><span class="s1">(</span><span class="s2">cakeQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> &gt; </span><span class="s8">0</span><span class="s2"> ? </span><span class="s4">" has-item"</span><span class="s2"> : </span><span class="s4">""</span><span class="s1">);</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">updateSummary</span><span class="s1">();</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p10"><span class="s15">function</span><span class="s7"> </span><span class="s2">changeSingle</span><span class="s1">(</span><span class="s21">id</span><span class="s1">,</span><span class="s21"> delta</span><span class="s1">)</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>singleQty</span><span class="s1">[</span><span class="s2">id</span><span class="s1">]</span><span class="s2"> = </span><span class="s18">Math</span><span class="s1">.</span><span class="s9">max</span><span class="s1">(</span><span class="s8">0</span><span class="s1">,</span><span class="s2"> </span><span class="s1">(</span><span class="s2">singleQty</span><span class="s1">[</span><span class="s2">id</span><span class="s1">]</span><span class="s2"> || </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> + delta</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s4">`qty-single-${id}`</span><span class="s1">).</span><span class="s2">textContent = singleQty</span><span class="s1">[</span><span class="s2">id</span><span class="s1">];</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s7"> row = </span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s2">`single-row-${id}`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">row</span><span class="s1">)</span><span class="s2"> row</span><span class="s1">.</span><span class="s2">className = </span><span class="s4">"addon-row"</span><span class="s2"> + </span><span class="s1">(</span><span class="s2">singleQty</span><span class="s1">[</span><span class="s2">id</span><span class="s1">]</span><span class="s2"> &gt; </span><span class="s8">0</span><span class="s2"> ? </span><span class="s4">" has-item"</span><span class="s2"> : </span><span class="s4">""</span><span class="s1">);</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">updateSummary</span><span class="s1">();</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p10"><span class="s15">function</span><span class="s7"> </span><span class="s2">changeAddon</span><span class="s1">(</span><span class="s21">key</span><span class="s1">,</span><span class="s21"> delta</span><span class="s1">)</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>addonQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> = </span><span class="s18">Math</span><span class="s1">.</span><span class="s9">max</span><span class="s1">(</span><span class="s8">0</span><span class="s1">,</span><span class="s2"> addonQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> + delta</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s4">`qty-${key}`</span><span class="s1">).</span><span class="s2">textContent = addonQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">];</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s7"> row = </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">`${key}-row`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">row</span><span class="s1">)</span><span class="s2"> row</span><span class="s1">.</span><span class="s2">className = </span><span class="s4">"addon-row"</span><span class="s2"> + </span><span class="s1">(</span><span class="s2">addonQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> &gt; </span><span class="s8">0</span><span class="s2"> ? </span><span class="s4">" has-item"</span><span class="s2"> : </span><span class="s4">""</span><span class="s1">);</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">updateSummary</span><span class="s1">();</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p9"><span class="s14">// </span><span class="s2">金額摘要</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p10"><span class="s15">function</span><span class="s7"> </span><span class="s2">updateSummary</span><span class="s1">()</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">let</span><span class="s2"> total = </span><span class="s8">0</span><span class="s1">,</span><span class="s2"> html = </span><span class="s4">""</span><span class="s1">;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// </span><span class="s6">蛋糕</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>products</span><span class="s1">.</span><span class="s9">filter</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; p</span><span class="s1">.</span><span class="s2">type === </span><span class="s4">"cake"</span><span class="s1">).</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>p</span><span class="s1">.</span><span class="s2">sizes</span><span class="s1">.</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">s</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s15">const</span><span class="s7"> key = </span><span class="s2">`${p.id}_${s.size}`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s15">const</span><span class="s2"> q = cakeQty</span><span class="s1">[</span><span class="s2">key</span><span class="s1">]</span><span class="s2"> || </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">q &gt; </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s15">const</span><span class="s2"> sub = s</span><span class="s1">.</span><span class="s2">price * q</span><span class="s1">;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">        </span>html += </span><span class="s2">`&lt;div class="s-row"&gt;&lt;span&gt;${p.name} ${s.size}${q &gt; 1 ? ` ×${q}` : ""}&lt;/span&gt;&lt;span&gt;NT$${sub.toLocaleString()}&lt;/span&gt;&lt;/div&gt;`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>total += sub</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">}</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">});</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">});</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// </span><span class="s6">單品</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>products</span><span class="s1">.</span><span class="s9">filter</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; p</span><span class="s1">.</span><span class="s2">type === </span><span class="s4">"single"</span><span class="s1">).</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">const</span><span class="s2"> q = singleQty</span><span class="s1">[</span><span class="s2">p</span><span class="s1">.</span><span class="s2">id</span><span class="s1">]</span><span class="s2"> || </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">q &gt; </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s15">const</span><span class="s2"> sub = p</span><span class="s1">.</span><span class="s2">price * q</span><span class="s1">;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span>html += </span><span class="s2">`&lt;div class="s-row"&gt;&lt;span&gt;${p.name} ×${q}&lt;/span&gt;&lt;span&gt;NT$${sub.toLocaleString()}&lt;/span&gt;&lt;/div&gt;`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span>total += sub</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">}</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">});</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// </span><span class="s6">餐具</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s7"> plateQ = </span><span class="s2">parseInt</span><span class="s1">(</span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"plate"</span><span class="s1">).</span><span class="s7">value || </span><span class="s8">0</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">plateQ &gt; </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">const</span><span class="s2"> sub = plateQ * </span><span class="s8">30</span><span class="s1">;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span>html += </span><span class="s2">`&lt;div class="s-row"&gt;&lt;span&gt;</span><span class="s6">餐具</span><span class="s2"> ×${plateQ}</span><span class="s6">組</span><span class="s2">&lt;/span&gt;&lt;span&gt;NT$${sub.toLocaleString()}&lt;/span&gt;&lt;/div&gt;`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>total += sub</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// </span><span class="s6">保冷袋</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">addonQty</span><span class="s1">.</span><span class="s2">bag &gt; </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">const</span><span class="s2"> sub = addonQty</span><span class="s1">.</span><span class="s2">bag * </span><span class="s8">100</span><span class="s1">;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span>html += </span><span class="s2">`&lt;div class="s-row"&gt;&lt;span&gt;</span><span class="s6">保冷袋</span><span class="s2"> ×${addonQty.bag}&lt;/span&gt;&lt;span&gt;NT$${sub.toLocaleString()}&lt;/span&gt;&lt;/div&gt;`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>total += sub</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s2">"summaryItems"</span><span class="s1">).</span><span class="s7">innerHTML = html || </span><span class="s2">'&lt;div style="color:#6a5040;font-size:12px;text-align:center"&gt;</span><span class="s6">尚未選擇任何品項</span><span class="s2">&lt;/div&gt;'</span><span class="s1">;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s2">"summaryTotal"</span><span class="s1">).</span><span class="s7">textContent = </span><span class="s2">`NT$${total.toLocaleString()}`</span><span class="s1">;</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p1"><span class="s2">// </span><span class="s6">驗證</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p7"><span class="s2">function</span><span class="s7"> </span><span class="s9">validate</span><span class="s1">()</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">let</span><span class="s2"> ok = </span><span class="s8">true</span><span class="s1">;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s1">[[</span><span class="s2">"name"</span><span class="s1">,</span><span class="s2">"err-name"</span><span class="s1">],[</span><span class="s2">"phone"</span><span class="s1">,</span><span class="s2">"err-phone"</span><span class="s1">],[</span><span class="s2">"pickupDate"</span><span class="s1">,</span><span class="s2">"err-date"</span><span class="s1">],[</span><span class="s2">"pickupTime"</span><span class="s1">,</span><span class="s2">"err-time"</span><span class="s1">]].</span><span class="s9">forEach</span><span class="s1">(([</span><span class="s21">id</span><span class="s1">,</span><span class="s21">err</span><span class="s1">])</span><span class="s7"> =&gt; </span><span class="s1">{</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s15">const</span><span class="s7"> v = </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s7">id</span><span class="s1">).</span><span class="s7">value</span><span class="s1">.</span><span class="s2">trim</span><span class="s1">();</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s2">err</span><span class="s1">).</span><span class="s2">style</span><span class="s1">.</span><span class="s2">display = v ? </span><span class="s4">"none"</span><span class="s2"> : </span><span class="s4">"block"</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">!v</span><span class="s1">)</span><span class="s2"> ok = </span><span class="s8">false</span><span class="s1">;</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">});</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">// </span><span class="s6">至少選一項</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s2"> hasCake = </span><span class="s18">Object</span><span class="s1">.</span><span class="s9">values</span><span class="s1">(</span><span class="s2">cakeQty</span><span class="s1">).</span><span class="s9">some</span><span class="s1">(</span><span class="s21">q</span><span class="s2"> =&gt; q &gt; </span><span class="s8">0</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s2"> hasSingle = </span><span class="s18">Object</span><span class="s1">.</span><span class="s9">values</span><span class="s1">(</span><span class="s2">singleQty</span><span class="s1">).</span><span class="s9">some</span><span class="s1">(</span><span class="s21">q</span><span class="s2"> =&gt; q &gt; </span><span class="s8">0</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">!hasCake &amp;&amp; !hasSingle</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span><span class="s2"> </span><span class="s9">alert</span><span class="s1">(</span><span class="s4">"</span><span class="s12">請至少選擇一項商品！</span><span class="s4">"</span><span class="s1">);</span><span class="s2"> ok = </span><span class="s8">false</span><span class="s1">;</span><span class="s2"> </span><span class="s1">}</span></p>
-<p class="p7"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">return</span><span class="s7"> ok</span><span class="s1">;</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p9"><span class="s14">// </span><span class="s2">組合訂單資料</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p10"><span class="s15">function</span><span class="s7"> </span><span class="s2">buildOrderData</span><span class="s1">()</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">let</span><span class="s2"> total = </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s2"> items = </span><span class="s1">[];</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>products</span><span class="s1">.</span><span class="s9">filter</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; p</span><span class="s1">.</span><span class="s2">type === </span><span class="s4">"cake"</span><span class="s1">).</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>p</span><span class="s1">.</span><span class="s2">sizes</span><span class="s1">.</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">s</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s15">const</span><span class="s2"> q = cakeQty</span><span class="s1">[</span><span class="s4">`${p.id}_${s.size}`</span><span class="s1">]</span><span class="s2"> || </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">q &gt; </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>items</span><span class="s1">.</span><span class="s9">push</span><span class="s1">({</span><span class="s2"> </span><span class="s5">name</span><span class="s2">:</span><span class="s4">`${p.name} ${s.size}`</span><span class="s1">,</span><span class="s2"> </span><span class="s5">qty</span><span class="s2">: q</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">: s</span><span class="s1">.</span><span class="s2">price</span><span class="s1">,</span><span class="s2"> </span><span class="s5">sub</span><span class="s2">: s</span><span class="s1">.</span><span class="s2">price * q </span><span class="s1">});</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span>total += s</span><span class="s1">.</span><span class="s2">price * q</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">}</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">});</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">});</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>products</span><span class="s1">.</span><span class="s9">filter</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; p</span><span class="s1">.</span><span class="s2">type === </span><span class="s4">"single"</span><span class="s1">).</span><span class="s9">forEach</span><span class="s1">(</span><span class="s21">p</span><span class="s2"> =&gt; </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">const</span><span class="s2"> q = singleQty</span><span class="s1">[</span><span class="s2">p</span><span class="s1">.</span><span class="s2">id</span><span class="s1">]</span><span class="s2"> || </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">q &gt; </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span>items</span><span class="s1">.</span><span class="s9">push</span><span class="s1">({</span><span class="s2"> </span><span class="s5">name</span><span class="s2">: p</span><span class="s1">.</span><span class="s2">name</span><span class="s1">,</span><span class="s2"> </span><span class="s5">qty</span><span class="s2">: q</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">: p</span><span class="s1">.</span><span class="s2">price</span><span class="s1">,</span><span class="s2"> </span><span class="s5">sub</span><span class="s2">: p</span><span class="s1">.</span><span class="s2">price * q </span><span class="s1">});</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span>total += p</span><span class="s1">.</span><span class="s2">price * q</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">}</span></p>
-<p class="p8"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">});</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s7"> plateQ = </span><span class="s2">parseInt</span><span class="s1">(</span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"plate"</span><span class="s1">).</span><span class="s7">value || </span><span class="s8">0</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">plateQ &gt; </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span><span class="s2"> items</span><span class="s1">.</span><span class="s9">push</span><span class="s1">({</span><span class="s2"> </span><span class="s5">name</span><span class="s2">:</span><span class="s4">`</span><span class="s12">餐具</span><span class="s4">`</span><span class="s1">,</span><span class="s2"> </span><span class="s5">qty</span><span class="s2">: plateQ</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">: </span><span class="s8">30</span><span class="s1">,</span><span class="s2"> </span><span class="s5">sub</span><span class="s2">: plateQ * </span><span class="s8">30</span><span class="s2"> </span><span class="s1">});</span><span class="s2"> total += plateQ * </span><span class="s8">30</span><span class="s1">;</span><span class="s2"> </span><span class="s1">}</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">addonQty</span><span class="s1">.</span><span class="s2">bag &gt; </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span><span class="s2"> items</span><span class="s1">.</span><span class="s9">push</span><span class="s1">({</span><span class="s2"> </span><span class="s5">name</span><span class="s2">:</span><span class="s4">"</span><span class="s12">保冷袋</span><span class="s4">"</span><span class="s1">,</span><span class="s2"> </span><span class="s5">qty</span><span class="s2">: addonQty</span><span class="s1">.</span><span class="s2">bag</span><span class="s1">,</span><span class="s2"> </span><span class="s5">price</span><span class="s2">: </span><span class="s8">100</span><span class="s1">,</span><span class="s2"> </span><span class="s5">sub</span><span class="s2">: addonQty</span><span class="s1">.</span><span class="s2">bag * </span><span class="s8">100</span><span class="s2"> </span><span class="s1">});</span><span class="s2"> total += addonQty</span><span class="s1">.</span><span class="s2">bag * </span><span class="s8">100</span><span class="s1">;</span><span class="s2"> </span><span class="s1">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p7"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s2">return</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>lineUID</span><span class="s1">,</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s5">name</span><span class="s7">: </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"name"</span><span class="s1">).</span><span class="s7">value</span><span class="s1">.</span><span class="s2">trim</span><span class="s1">(),</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s5">phone</span><span class="s7">: </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"phone"</span><span class="s1">).</span><span class="s7">value</span><span class="s1">.</span><span class="s2">trim</span><span class="s1">(),</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s5">pickupDate</span><span class="s7">: </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"pickupDate"</span><span class="s1">).</span><span class="s7">value</span><span class="s1">,</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s5">pickupTime</span><span class="s7">: </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"pickupTime"</span><span class="s1">).</span><span class="s7">value</span><span class="s1">,</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>items</span><span class="s1">,</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>total</span><span class="s1">,</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s5">note</span><span class="s7">: </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"note"</span><span class="s1">).</span><span class="s7">value</span><span class="s1">.</span><span class="s2">trim</span><span class="s1">(),</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s5">timestamp</span><span class="s7">: </span><span class="s15">new</span><span class="s7"> </span><span class="s18">Date</span><span class="s1">().</span><span class="s9">toLocaleString</span><span class="s1">(</span><span class="s2">"zh-TW"</span><span class="s1">,</span><span class="s7"> </span><span class="s1">{</span><span class="s7"> </span><span class="s5">timeZone</span><span class="s7">: </span><span class="s2">"Asia/Taipei"</span><span class="s7"> </span><span class="s1">})</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">};</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p9"><span class="s14">// </span><span class="s2">送出訂單</span></p>
-<p class="p1"><span class="s2">// ==============================</span></p>
-<p class="p7"><span class="s2">async</span><span class="s7"> </span><span class="s2">function</span><span class="s7"> </span><span class="s9">submitForm</span><span class="s1">()</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s15">if</span><span class="s7"> </span><span class="s1">(</span><span class="s7">!</span><span class="s2">validate</span><span class="s1">())</span><span class="s7"> </span><span class="s15">return</span><span class="s1">;</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s15">const</span><span class="s7"> btn = </span><span class="s18">document</span><span class="s1">.</span><span class="s2">getElementById</span><span class="s1">(</span><span class="s4">"submitBtn"</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>btn</span><span class="s1">.</span><span class="s2">disabled = </span><span class="s8">true</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span>btn</span><span class="s1">.</span><span class="s2">textContent = </span><span class="s4">"</span><span class="s12">送出中⋯⋯</span><span class="s4">"</span><span class="s1">;</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s15">try</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p11"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s15">await</span><span class="s7"> </span><span class="s9">fetch</span><span class="s1">(</span><span class="s2">GAS_URL</span><span class="s1">,</span><span class="s7"> </span><span class="s1">{</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s5">method</span><span class="s2">: </span><span class="s4">"POST"</span><span class="s1">,</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s5">mode</span><span class="s7">: </span><span class="s2">"no-cors"</span><span class="s1">,</span></p>
-<p class="p2"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s2">headers</span><span class="s7">: </span><span class="s1">{</span><span class="s7"> </span><span class="s2">"Content-Type"</span><span class="s7">: </span><span class="s4">"application/json"</span><span class="s7"> </span><span class="s1">},</span></p>
-<p class="p10"><span class="s7"><span class="Apple-converted-space">      </span></span><span class="s5">body</span><span class="s7">: </span><span class="s18">JSON</span><span class="s1">.</span><span class="s2">stringify</span><span class="s1">(</span><span class="s2">buildOrderData</span><span class="s1">())</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">});</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s4">"formScreen"</span><span class="s1">).</span><span class="s2">style</span><span class="s1">.</span><span class="s2">display = </span><span class="s4">"none"</span><span class="s1">;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s18">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s2">"successScreen"</span><span class="s1">).</span><span class="s7">style</span><span class="s1">.</span><span class="s7">display = </span><span class="s2">"block"</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">}</span><span class="s2"> </span><span class="s15">catch</span><span class="s1">(</span><span class="s2">e</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">    </span></span><span class="s9">alert</span><span class="s1">(</span><span class="s2">"</span><span class="s6">送出失敗，請再試一次</span><span class="s2">"</span><span class="s1">);</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>btn</span><span class="s1">.</span><span class="s2">disabled = </span><span class="s8">false</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span>btn</span><span class="s1">.</span><span class="s2">textContent = </span><span class="s4">"</span><span class="s12">確認送出訂單</span><span class="s4"> </span><span class="s22">🎂</span><span class="s4">"</span><span class="s1">;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">}</span></p>
-<p class="p8"><span class="s2">}</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p10"><span class="s2">init</span><span class="s1">();</span></p>
-<p class="p2"><span class="s1">&lt;/</span><span class="s2">script</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/</span><span class="s2">body</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/</span><span class="s2">html</span><span class="s1">&gt;</span></p>
+
+<!-- 載入中 -->
+<div class="loading" id="loadingScreen">
+  <div class="spinner"></div>
+  <p>載入商品資訊中⋯</p>
+</div>
+
+<!-- 表單 -->
+<div id="formScreen" style="display:none">
+  <div class="header">
+    <h1>簡法甜點</h1>
+    <h2>MOINS Pâtisserie</h2>
+  </div>
+  <div class="form-wrap">
+
+    <!-- 基本資料 -->
+    <div class="section">
+      <div class="section-title">👤 基本資料</div>
+      <div class="field"><label class="required">訂購姓名</label><input type="text" id="name" placeholder="請輸入姓名"><div class="err" id="err-name">請填寫姓名</div></div>
+      <div class="field"><label class="required">聯絡電話</label><input type="tel" id="phone" placeholder="請輸入手機號碼"><div class="err" id="err-phone">請填寫電話</div></div>
+      <div class="field"><label class="required">取貨日期</label><input type="date" id="pickupDate"><div class="err" id="err-date">請選擇日期</div></div>
+      <div class="field"><label class="required">預計取貨時間</label>
+        <select id="pickupTime">
+          <option value="">請選擇時間</option>
+          <option>12:00</option><option>13:00</option><option>14:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+        </select>
+        <div class="err" id="err-time">請選擇時間</div>
+      </div>
+    </div>
+
+    <!-- 蛋糕商品（動態產生） -->
+    <div class="section" id="cakeSection">
+      <div class="section-title">🎂 蛋糕選購</div>
+      <div id="cakeProducts"><div style="color:#bbb;font-size:13px;text-align:center;padding:20px">載入中⋯</div></div>
+    </div>
+
+    <!-- 單品加購 -->
+    <div class="section">
+      <div class="section-title">🍮 單品加購</div>
+      <div id="singleProducts"><div style="color:#bbb;font-size:13px;text-align:center;padding:20px">載入中⋯</div></div>
+    </div>
+
+    <!-- 配件加購 -->
+    <div class="section">
+      <div class="section-title">🛍️ 配件加購</div>
+      <div class="field">
+        <label>餐具加購（NT$30 / 組）</label>
+        <select id="plate" onchange="updateSummary()">
+          <option value="0">不加購</option>
+          <option value="1">1組 NT$30</option>
+          <option value="2">2組 NT$60</option>
+          <option value="3">3組 NT$90</option>
+        </select>
+      </div>
+      <div class="addon-row" id="bag-row">
+        <div><div class="addon-name">保冷袋加購</div><div class="addon-price-tag">NT$100 / 個</div></div>
+        <div class="qty-ctrl">
+          <button class="qty-btn" onclick="changeAddon('bag',-1)">−</button>
+          <span class="qty-num" id="qty-bag">0</span>
+          <button class="qty-btn" onclick="changeAddon('bag',1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 備註 -->
+    <div class="section">
+      <div class="section-title">📝 備註</div>
+      <textarea id="note" placeholder="客製化文字、特殊需求等（選填）"></textarea>
+    </div>
+
+    <!-- 金額摘要 -->
+    <div class="summary">
+      <div class="summary-title">💰 訂單金額摘要</div>
+      <div id="summaryItems"><div style="color:#6a5040;font-size:12px;text-align:center">尚未選擇任何品項</div></div>
+      <hr class="s-divider">
+      <div class="s-total"><span>總金額</span><span id="summaryTotal">NT$0</span></div>
+    </div>
+
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">確認送出訂單 🎂</button>
+  </div>
+</div>
+
+<!-- 成功畫面 -->
+<div class="success-screen" id="successScreen">
+  <div class="success-icon">🎉</div>
+  <div class="success-title">訂單已送出！</div>
+  <div class="success-msg">感謝您訂購簡法甜點 😊<br><br>我們將透過 LINE 發送<br>訂單明細與匯款資訊給您<br><br>請完成匯款後於 LINE 回傳<br>匯款截圖或帳號後五碼</div>
+</div>
+
+<script>
+// ==============================
+// 設定區（部署後填入）
+// ==============================
+const LIFF_ID = "2009889923-RxCLymLI";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbz-tLLmvmOGI0kocTaWRnT5ye3erx8rQoU5qDDAQ6GWTqLKU4OK3mxOvhP73C9NDsXk/exec";
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbxV28fHfF8Z0yAGxextrDNcG7vZ05NjSyJ6ll7be-7Nt4mxvPsMeXQtJh2R_2j3JeDa/exec";
+
+// ==============================
+// 全域狀態
+// ==============================
+let lineUID = "";
+let products = [];         // 從試算表讀取的商品
+const cakeQty = {};        // { "商品ID_尺寸": 數量 }
+const addonQty = { bag: 0 };
+const singleQty = {};      // { "商品ID": 數量 }
+
+// ==============================
+// 初始化
+// ==============================
+document.getElementById("loadingScreen").style.display = "block";
+
+async function init() {
+  // 設定最小日期（明天）
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  document.getElementById("pickupDate").min = d.toISOString().split("T")[0];
+
+  // LIFF 初始化
+  try {
+    await liff.init({ liffId: LIFF_ID });
+    if (liff.isLoggedIn()) {
+      const p = await liff.getProfile();
+      lineUID = p.userId;
+    }
+  } catch(e) { console.log("LIFF:", e); }
+
+  // 讀取商品
+  await loadProducts();
+
+  document.getElementById("loadingScreen").style.display = "none";
+  document.getElementById("formScreen").style.display = "block";
+}
+
+// ==============================
+// 讀取商品（從 Google Apps Script）
+// ==============================
+async function loadProducts() {
+  try {
+    const res = await fetch(SHEET_API_URL);
+    const data = await res.json();
+    products = data;
+  } catch(e) {
+    // 若讀取失敗，使用預設商品
+    products = getDefaultProducts();
+  }
+  renderProducts();
+}
+
+function getDefaultProducts() {
+  return [
+    { id:"A", type:"cake", name:"香草聖多諾黑", desc:"不建議隔夜", img:"", sizes:[
+      { size:"4吋（約2-3人）", price:890 },
+      { size:"6吋（約6-8人）", price:1380 },
+      { size:"8吋（約7-10人）", price:1880 },
+      { size:"7吋愛心造型", price:1880 }
+    ]},
+    { id:"B", type:"cake", name:"季節花束夏洛特－蜜桃馬鞭草", desc:"※草莓供應結束※", img:"", sizes:[
+      { size:"5吋（約3-4人）", price:1420 },
+      { size:"6吋（約6-8人）", price:1880 },
+      { size:"8吋（約7-10人）", price:2760 }
+    ]},
+    { id:"C", type:"cake", name:"季節夏洛特－蜜桃馬鞭草", desc:"※草莓供應結束※", img:"", sizes:[
+      { size:"4吋（約2-3人）", price:890 },
+      { size:"6吋（約6-8人）", price:1380 },
+      { size:"8吋（約7-10人）", price:1880 }
+    ]},
+    { id:"D", type:"single", name:"香草可麗露", desc:"", price:80, unit:"顆" },
+    { id:"E", type:"single", name:"香香焦糖嫩布丁", desc:"", price:100, unit:"杯" }
+  ];
+}
+
+// ==============================
+// 渲染商品
+// ==============================
+function renderProducts() {
+  const cakes = products.filter(p => p.type === "cake");
+  const singles = products.filter(p => p.type === "single");
+
+  // 蛋糕
+  let cakeHTML = "";
+  cakes.forEach(p => {
+    const imgHTML = p.img
+      ? `<div class="product-img"><img src="${p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='🎂'"></div>`
+      : `<div class="product-img" style="height:80px;font-size:28px;display:flex;align-items:center;justify-content:center">🎂</div>`;
+
+    let sizesHTML = "";
+    p.sizes.forEach(s => {
+      const key = `${p.id}_${s.size}`;
+      cakeQty[key] = cakeQty[key] || 0;
+      sizesHTML += `
+        <div class="size-row" id="row-${key}">
+          <span class="size-left">${s.size}</span>
+          <div style="display:flex;align-items:center">
+            <span class="size-price">NT$${s.price.toLocaleString()}</span>
+            <div class="qty-ctrl">
+              <button class="qty-btn" onclick="changeCake('${key}',-1,${s.price})">−</button>
+              <span class="qty-num" id="qty-${key}">0</span>
+              <button class="qty-btn" onclick="changeCake('${key}',1,${s.price})">+</button>
+            </div>
+          </div>
+        </div>`;
+    });
+
+    cakeHTML += `
+      <div class="product-card">
+        ${imgHTML}
+        <div class="product-info">
+          <div class="product-name">${p.name}</div>
+          ${p.desc ? `<div class="product-desc">${p.desc}</div>` : ""}
+          <div class="size-options">${sizesHTML}</div>
+        </div>
+      </div>`;
+  });
+  document.getElementById("cakeProducts").innerHTML = cakeHTML;
+
+  // 單品
+  let singleHTML = "";
+  singles.forEach(p => {
+    singleQty[p.id] = 0;
+    singleHTML += `
+      <div class="addon-row" id="single-row-${p.id}">
+        <div>
+          <div class="addon-name">${p.name}</div>
+          <div class="addon-price-tag">NT$${p.price} / ${p.unit}</div>
+        </div>
+        <div class="qty-ctrl">
+          <button class="qty-btn" onclick="changeSingle('${p.id}',-1)">−</button>
+          <span class="qty-num" id="qty-single-${p.id}">0</span>
+          <button class="qty-btn" onclick="changeSingle('${p.id}',1)">+</button>
+        </div>
+      </div>`;
+  });
+  document.getElementById("singleProducts").innerHTML = singleHTML;
+}
+
+// ==============================
+// 數量控制
+// ==============================
+function changeCake(key, delta) {
+  cakeQty[key] = Math.max(0, (cakeQty[key] || 0) + delta);
+  document.getElementById(`qty-${key}`).textContent = cakeQty[key];
+  const row = document.getElementById(`row-${key}`);
+  if (row) row.className = "size-row" + (cakeQty[key] > 0 ? " has-item" : "");
+  updateSummary();
+}
+
+function changeSingle(id, delta) {
+  singleQty[id] = Math.max(0, (singleQty[id] || 0) + delta);
+  document.getElementById(`qty-single-${id}`).textContent = singleQty[id];
+  const row = document.getElementById(`single-row-${id}`);
+  if (row) row.className = "addon-row" + (singleQty[id] > 0 ? " has-item" : "");
+  updateSummary();
+}
+
+function changeAddon(key, delta) {
+  addonQty[key] = Math.max(0, addonQty[key] + delta);
+  document.getElementById(`qty-${key}`).textContent = addonQty[key];
+  const row = document.getElementById(`${key}-row`);
+  if (row) row.className = "addon-row" + (addonQty[key] > 0 ? " has-item" : "");
+  updateSummary();
+}
+
+// ==============================
+// 金額摘要
+// ==============================
+function updateSummary() {
+  let total = 0, html = "";
+
+  // 蛋糕
+  products.filter(p => p.type === "cake").forEach(p => {
+    p.sizes.forEach(s => {
+      const key = `${p.id}_${s.size}`;
+      const q = cakeQty[key] || 0;
+      if (q > 0) {
+        const sub = s.price * q;
+        html += `<div class="s-row"><span>${p.name} ${s.size}${q > 1 ? ` ×${q}` : ""}</span><span>NT$${sub.toLocaleString()}</span></div>`;
+        total += sub;
+      }
+    });
+  });
+
+  // 單品
+  products.filter(p => p.type === "single").forEach(p => {
+    const q = singleQty[p.id] || 0;
+    if (q > 0) {
+      const sub = p.price * q;
+      html += `<div class="s-row"><span>${p.name} ×${q}</span><span>NT$${sub.toLocaleString()}</span></div>`;
+      total += sub;
+    }
+  });
+
+  // 餐具
+  const plateQ = parseInt(document.getElementById("plate").value || 0);
+  if (plateQ > 0) {
+    const sub = plateQ * 30;
+    html += `<div class="s-row"><span>餐具 ×${plateQ}組</span><span>NT$${sub.toLocaleString()}</span></div>`;
+    total += sub;
+  }
+
+  // 保冷袋
+  if (addonQty.bag > 0) {
+    const sub = addonQty.bag * 100;
+    html += `<div class="s-row"><span>保冷袋 ×${addonQty.bag}</span><span>NT$${sub.toLocaleString()}</span></div>`;
+    total += sub;
+  }
+
+  document.getElementById("summaryItems").innerHTML = html || '<div style="color:#6a5040;font-size:12px;text-align:center">尚未選擇任何品項</div>';
+  document.getElementById("summaryTotal").textContent = `NT$${total.toLocaleString()}`;
+}
+
+// ==============================
+// 驗證
+// ==============================
+function validate() {
+  let ok = true;
+  [["name","err-name"],["phone","err-phone"],["pickupDate","err-date"],["pickupTime","err-time"]].forEach(([id,err]) => {
+    const v = document.getElementById(id).value.trim();
+    document.getElementById(err).style.display = v ? "none" : "block";
+    if (!v) ok = false;
+  });
+
+  // 至少選一項
+  const hasCake = Object.values(cakeQty).some(q => q > 0);
+  const hasSingle = Object.values(singleQty).some(q => q > 0);
+  if (!hasCake && !hasSingle) { alert("請至少選擇一項商品！"); ok = false; }
+  return ok;
+}
+
+// ==============================
+// 組合訂單資料
+// ==============================
+function buildOrderData() {
+  let total = 0;
+  const items = [];
+
+  products.filter(p => p.type === "cake").forEach(p => {
+    p.sizes.forEach(s => {
+      const q = cakeQty[`${p.id}_${s.size}`] || 0;
+      if (q > 0) {
+        items.push({ name:`${p.name} ${s.size}`, qty: q, price: s.price, sub: s.price * q });
+        total += s.price * q;
+      }
+    });
+  });
+
+  products.filter(p => p.type === "single").forEach(p => {
+    const q = singleQty[p.id] || 0;
+    if (q > 0) {
+      items.push({ name: p.name, qty: q, price: p.price, sub: p.price * q });
+      total += p.price * q;
+    }
+  });
+
+  const plateQ = parseInt(document.getElementById("plate").value || 0);
+  if (plateQ > 0) { items.push({ name:`餐具`, qty: plateQ, price: 30, sub: plateQ * 30 }); total += plateQ * 30; }
+  if (addonQty.bag > 0) { items.push({ name:"保冷袋", qty: addonQty.bag, price: 100, sub: addonQty.bag * 100 }); total += addonQty.bag * 100; }
+
+  return {
+    lineUID,
+    name: document.getElementById("name").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    pickupDate: document.getElementById("pickupDate").value,
+    pickupTime: document.getElementById("pickupTime").value,
+    items,
+    total,
+    note: document.getElementById("note").value.trim(),
+    timestamp: new Date().toLocaleString("zh-TW", { timeZone: "Asia/Taipei" })
+  };
+}
+
+// ==============================
+// 送出訂單
+// ==============================
+async function submitForm() {
+  if (!validate()) return;
+  const btn = document.getElementById("submitBtn");
+  btn.disabled = true;
+  btn.textContent = "送出中⋯⋯";
+
+  try {
+    await fetch(GAS_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(buildOrderData())
+    });
+    document.getElementById("formScreen").style.display = "none";
+    document.getElementById("successScreen").style.display = "block";
+  } catch(e) {
+    alert("送出失敗，請再試一次");
+    btn.disabled = false;
+    btn.textContent = "確認送出訂單 🎂";
+  }
+}
+
+init();
+</script>
 </body>
 </html>
