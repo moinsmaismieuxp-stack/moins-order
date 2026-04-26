@@ -20,19 +20,20 @@ body{font-family:'Noto Serif TC',serif;background:var(--cream);color:var(--text)
 .nav{position:sticky;top:0;z-index:100;background:rgba(245,240,232,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--cream3);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:'Playfair Display',serif;font-size:17px;color:var(--navy);letter-spacing:1px;font-weight:500}
 .nav-sub{font-size:10px;color:var(--text3);letter-spacing:2px;font-family:'Playfair Display',serif;font-style:italic;margin-top:2px}
-.cart-badge{background:var(--navy);color:#fff;font-size:12px;padding:6px 16px;border-radius:20px;cursor:pointer;letter-spacing:1px}
+.nav-btns{display:flex;gap:8px}
+.nav-btn{background:var(--navy);color:#fff;font-size:12px;padding:6px 14px;border-radius:20px;cursor:pointer;letter-spacing:1px;border:none;font-family:'Noto Serif TC',serif}
 
-.hero{position:relative;background:var(--cream2);padding:48px 28px 44px;text-align:center;border-bottom:1px solid var(--cream3);overflow:hidden}
-.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;border:1px solid rgba(58,66,88,0.08);pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(58,66,88,0.06);pointer-events:none}
-.hero-ribbon{display:inline-block;background:var(--tan3);border-top:1px solid var(--tan2);border-bottom:1px solid var(--tan2);padding:10px 32px;margin-bottom:18px;width:calc(100% + 56px);margin-left:-28px}
+.hero{background:var(--cream2);padding:36px 28px 32px;text-align:center;border-bottom:1px solid var(--cream3);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(58,66,88,0.07)}
+.hero::after{content:'';position:absolute;bottom:-30px;left:-30px;width:130px;height:130px;border-radius:50%;border:1px solid rgba(58,66,88,0.05)}
+.hero-ribbon{background:var(--tan3);border-top:1px solid var(--tan2);border-bottom:1px solid var(--tan2);padding:12px 28px;margin:0 -28px 20px;width:calc(100% + 56px)}
 .hero-brand{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);letter-spacing:4px;font-weight:500;display:block}
 .hero-brand-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:var(--navy3);letter-spacing:3px;margin-top:4px;display:block}
-.hero-tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--text3);letter-spacing:1px;line-height:1.8;margin-top:16px}
-.hero-tagline strong{display:block;font-size:14px;color:var(--navy2);margin-top:6px;letter-spacing:2px;font-style:normal}
+.hero-tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--text3);letter-spacing:0.5px;line-height:1.9}
+.hero-tagline strong{display:block;font-size:15px;color:var(--navy2);margin-top:8px;letter-spacing:2px;font-style:normal}
 .hero-line{width:40px;height:1px;background:var(--tan);margin:16px auto 0}
 
-.wrap{max-width:480px;margin:0 auto;padding:0 0 80px}
+.wrap{max-width:480px;margin:0 auto;padding:0 0 100px}
 .divider{height:8px;background:var(--cream2)}
 
 .sec{background:var(--w);margin-bottom:2px;padding:26px 20px}
@@ -49,21 +50,24 @@ input,select,textarea{width:100%;border:1px solid var(--bdr);border-radius:8px;p
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy3);background:var(--w);box-shadow:0 0 0 3px rgba(58,66,88,0.08)}
 textarea{resize:vertical;min-height:90px;line-height:1.6}
 .err{font-size:12px;color:#9b4040;margin-top:5px;display:none}
+.field-note{font-size:11px;color:var(--text3);margin-top:5px;font-style:italic;line-height:1.5}
 
+/* Product cards — 4:3 ratio recommended (e.g. 800×600px) */
 .prod-card{margin-bottom:20px;border-radius:12px;overflow:hidden;border:1px solid var(--cream3);background:var(--w)}
 .prod-card:last-child{margin-bottom:0}
-.prod-img-wrap{position:relative;height:230px;background:var(--cream2);overflow:hidden}
-.prod-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s}
-.prod-card:hover .prod-img-wrap img{transform:scale(1.04)}
-.prod-img-ph{width:100%;height:230px;background:linear-gradient(135deg,var(--cream2),var(--tan4));display:flex;align-items:center;justify-content:center;font-size:56px}
-.prod-tag{position:absolute;top:14px;left:14px;background:rgba(42,46,58,0.65);color:rgba(245,240,232,0.95);font-size:10px;letter-spacing:2px;padding:5px 12px;border-radius:20px;backdrop-filter:blur(6px);font-family:'Playfair Display',serif;font-style:italic}
+.prod-img-wrap{position:relative;width:100%;aspect-ratio:4/3;background:var(--cream2);overflow:hidden}
+.prod-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.5s}
+.prod-card:hover .prod-img-wrap img{transform:scale(1.03)}
+.prod-img-ph{width:100%;height:100%;background:linear-gradient(135deg,var(--cream2),var(--tan4));display:flex;align-items:center;justify-content:center;font-size:56px}
 .prod-body{padding:18px 20px 20px}
 .prod-name{font-family:'Playfair Display',serif;font-size:17px;color:var(--navy);margin-bottom:5px;font-weight:500}
 .prod-desc{font-size:12px;color:var(--text3);font-style:italic;margin-bottom:16px;letter-spacing:0.5px}
 .sizes{display:flex;flex-direction:column;gap:9px}
 .sz-row{display:flex;align-items:center;justify-content:space-between;padding:12px 15px;border-radius:8px;border:1px solid var(--cream3);background:var(--cream);transition:all 0.2s}
 .sz-row.on{border-color:var(--navy3);background:var(--tan4)}
+.sz-main{display:flex;flex-direction:column;gap:3px}
 .sz-name{font-size:14px;color:var(--text2)}
+.sz-hint{font-size:11px;color:var(--text4);font-style:italic}
 .sz-price{font-size:13px;font-weight:500;color:var(--navy2);margin-right:12px}
 .qc{display:flex;align-items:center;gap:9px}
 .qb{width:30px;height:30px;border-radius:50%;border:1px solid var(--navy3);background:var(--w);color:var(--navy);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.15s;line-height:1}
@@ -74,9 +78,13 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 .si-row:last-child{margin-bottom:0}
 .si-row.on{border-color:var(--navy3);background:var(--tan4)}
 .si-left{display:flex;align-items:center;gap:14px}
-.si-img{width:60px;height:60px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--cream2)}
+.si-img{width:60px;height:60px;border-radius:8px;object-fit:cover;object-position:center;flex-shrink:0;background:var(--cream2)}
 .si-name{font-size:14px;color:var(--text);margin-bottom:3px;font-weight:500}
 .si-price{font-size:12px;color:var(--text3)}
+
+/* Scroll to bottom FAB */
+.fab{position:fixed;bottom:140px;right:18px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(58,66,88,0.3);transition:all 0.2s}
+.fab:active{transform:scale(0.92)}
 
 .oss{background:var(--navy);padding:22px 20px 18px;position:sticky;bottom:0;border-top:1px solid rgba(200,184,152,0.2)}
 .os-title{font-size:10px;letter-spacing:4px;color:var(--tan2);margin-bottom:14px;font-family:'Playfair Display',serif;font-style:italic}
@@ -102,7 +110,6 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 .suc-title{font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin-bottom:12px;font-weight:500}
 .suc-line{width:30px;height:1px;background:var(--tan);margin:0 auto 20px}
 .suc-msg{font-size:14px;color:var(--text2);line-height:2.2;letter-spacing:0.5px}
-.dbg{background:#fff8e1;border:1px solid #f59e0b;border-radius:6px;padding:8px 12px;margin:12px 20px;font-size:11px;color:#856404;display:none}
 </style>
 </head>
 <body>
@@ -118,7 +125,10 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
       <div class="nav-logo">簡法甜點</div>
       <div class="nav-sub">MOINS Pâtisserie</div>
     </div>
-    <div class="cart-badge" onclick="document.getElementById('orderSummary').scrollIntoView({behavior:'smooth'})">訂單摘要</div>
+    <div class="nav-btns">
+      <button class="nav-btn" onclick="document.getElementById('orderSummary').scrollIntoView({behavior:'smooth'})">訂單摘要</button>
+      <button class="nav-btn" onclick="document.getElementById('submitBtn').scrollIntoView({behavior:'smooth'})">送出 ↓</button>
+    </div>
   </div>
 
   <div class="hero">
@@ -133,14 +143,21 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
     <div class="hero-line"></div>
   </div>
 
-  <div class="dbg" id="debugBar"></div>
+  <!-- FAB scroll to bottom -->
+  <button class="fab" onclick="document.getElementById('submitBtn').scrollIntoView({behavior:'smooth'})" title="前往送出">↓</button>
+
   <div class="wrap">
 
     <div class="sec">
       <div class="sec-hd"><div class="sec-num">1</div><div class="sec-title">基本資料</div></div>
       <div class="field"><label class="fl req">訂購姓名</label><input type="text" id="name" placeholder="請輸入姓名"><div class="err" id="err-name">請填寫姓名</div></div>
       <div class="field"><label class="fl req">聯絡電話</label><input type="tel" id="phone" placeholder="請輸入手機號碼"><div class="err" id="err-phone">請填寫電話</div></div>
-      <div class="field"><label class="fl req">取貨日期</label><input type="date" id="pickupDate"><div class="err" id="err-date">請選擇日期</div></div>
+      <div class="field">
+        <label class="fl req">取貨日期</label>
+        <input type="date" id="pickupDate" oninput="validateDate(this)">
+        <div class="err" id="err-date">請選擇取貨日期</div>
+        <div class="field-note">⚠️ 取貨日期需至少提前 3 天預訂，且週一公休不提供取貨<br>如需 3 天內取貨，請私訊官方帳號詢問，將有專人為您安排</div>
+      </div>
       <div class="field"><label class="fl req">預計取貨時間</label>
         <select id="pickupTime">
           <option value="">請選擇時間</option>
@@ -156,7 +173,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
     <div class="sec">
       <div class="sec-hd"><div class="sec-num">2</div><div class="sec-title">蛋糕選購</div></div>
       <div class="sec-note">🕯️ 每份蛋糕免費附贈香檳金蠟燭 1 隻與餐具盤 5 人份</div>
-      <div id="cakeProducts"><div style="color:var(--text4);font-size:14px;text-align:center;padding:30px;font-style:italic;letter-spacing:1px">載入商品中⋯</div></div>
+      <div id="cakeProducts"><div style="color:var(--text4);font-size:14px;text-align:center;padding:30px;font-style:italic">載入商品中⋯</div></div>
     </div>
 
     <div class="divider"></div>
@@ -170,18 +187,20 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 
     <div class="sec">
       <div class="sec-hd"><div class="sec-num">4</div><div class="sec-title">配件加購</div></div>
-      <div class="field">
-        <label class="fl">餐具加購（每組 / 5人份）— NT$30</label>
-        <select id="plate" onchange="updateSummary()">
-          <option value="0">不加購</option>
-          <option value="1">1 組 NT$30</option>
-          <option value="2">2 組 NT$60</option>
-          <option value="3">3 組 NT$90</option>
-        </select>
-      </div>
-      <div class="si-row" id="bag-row" style="margin-top:12px">
+      <div class="si-row" id="plate-row">
         <div class="si-left">
-          <div class="si-img" style="display:flex;align-items:center;justify-content:center;font-size:26px">🧊</div>
+          <div class="si-img" style="display:flex;align-items:center;justify-content:center;font-size:26px;background:var(--cream2)">🍽️</div>
+          <div><div class="si-name">餐具加購</div><div class="si-price">NT$30 / 組（每組 5 人份）</div></div>
+        </div>
+        <div class="qc">
+          <button class="qb" onclick="changeAddon('plate',-1)">−</button>
+          <span class="qn" id="qty-plate">0</span>
+          <button class="qb" onclick="changeAddon('plate',1)">+</button>
+        </div>
+      </div>
+      <div class="si-row" id="bag-row" style="margin-top:10px">
+        <div class="si-left">
+          <div class="si-img" style="display:flex;align-items:center;justify-content:center;font-size:26px;background:var(--cream2)">🧊</div>
           <div><div class="si-name">保冷袋</div><div class="si-price">NT$100 / 個</div></div>
         </div>
         <div class="qc">
@@ -224,7 +243,6 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 <script>
 const LIFF_ID="2009889923-RxCLymLI";
 const GAS_URL="https://script.google.com/macros/s/AKfycbz-tLLmvmOGI0kocTaWRnT5ye3erx8rQoU5qDDAQ6GWTqLKU4OK3mxOvhP73C9NDsXk/exec";
-const SHEET_API="https://script.google.com/macros/s/AKfycbxV28fHfF8Z0yAGxextrDNcG7vZ05NjSyJ6ll7be-7Nt4mxvPsMeXQtJh2R_2j3JeDa/exec";
 const IMG={
   A:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777188388/IMG_5846_5_hpci69.jpg",
   B:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189282/IMG_8852_2_erdyqi.jpg",
@@ -235,48 +253,79 @@ const IMG={
   G:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189785/IMG_8842_e5l7cx.jpg"
 };
 
-let lineUID="",products=[];
-const cakeQty={},addonQty={bag:0},singleQty={};
+let lineUID="";
+const addonQty={plate:0,bag:0};
 
-function dbg(m){const b=document.getElementById("debugBar");b.style.display="block";b.innerHTML+=m+"<br>";}
-
-function getDefault(){return[
+// 尺寸資料：size=顯示名稱，hint=備註，orderName=訂單顯示名稱
+const products=[
   {id:"A",type:"cake",name:"香草聖多諾黑",desc:"不建議隔夜",img:IMG.A,sizes:[
-    {size:"4吋（約2-3人）",price:890},{size:"6吋（約6-8人）",price:1380},
-    {size:"8吋（約7-10人）",price:1880},{size:"7吋愛心造型",price:1880},
-    {size:"10-14吋客製化造型",price:0}]},
-  {id:"B",type:"cake",name:"季節花束夏洛特",desc:"蜜桃馬鞭草 ※草莓供應結束※",img:IMG.B,sizes:[
-    {size:"5吋（約3-4人）",price:1420},{size:"6吋（約6-8人）",price:1880},{size:"8吋（約7-10人）",price:2760}]},
-  {id:"C",type:"cake",name:"季節夏洛特",desc:"蜜桃馬鞭草 ※草莓供應結束※",img:IMG.C,sizes:[
-    {size:"4吋（約2-3人）",price:890},{size:"6吋（約6-8人）",price:1380},{size:"8吋（約7-10人）",price:1880}]},
+    {size:"4吋",hint:"約2-3人",price:890},
+    {size:"6吋",hint:"約6-8人",price:1380},
+    {size:"8吋",hint:"約7-10人",price:1880},
+    {size:"7吋愛心造型",hint:"",price:1880},
+    {size:"10-14吋客製化造型",hint:"",price:0}
+  ]},
   {id:"G",type:"cake",name:"2026母親節限定花冠蛋糕",desc:"限量供應，售完為止",img:IMG.G,sizes:[
-    {size:"6吋（約6-8人）",price:1690}]},
+    {size:"6吋",hint:"約6-8人",price:1690}
+  ]},
+  {id:"B",type:"cake",name:"季節花束夏洛特",desc:"蜜桃馬鞭草 ※草莓供應結束※",img:IMG.B,sizes:[
+    {size:"5吋",hint:"約3-4人",price:1420},
+    {size:"6吋",hint:"約6-8人",price:1880},
+    {size:"8吋",hint:"約7-10人",price:2760}
+  ]},
+  {id:"C",type:"cake",name:"季節夏洛特",desc:"蜜桃馬鞭草 ※草莓供應結束※",img:IMG.C,sizes:[
+    {size:"4吋",hint:"約2-3人",price:890},
+    {size:"6吋",hint:"約6-8人",price:1380},
+    {size:"8吋",hint:"約7-10人",price:1880}
+  ]},
   {id:"D",type:"single",name:"香草可麗露",desc:"",img:IMG.D,price:80,unit:"顆"},
   {id:"E",type:"single",name:"香香焦糖嫩布丁",desc:"",img:IMG.E,price:100,unit:"杯"},
   {id:"F",type:"single",name:"馬卡龍禮盒",desc:"",img:IMG.F,price:280,unit:"盒"}
-];}
+];
+
+const cakeQty={};
+products.filter(p=>p.type==="cake").forEach(p=>p.sizes.forEach(s=>{cakeQty[`${p.id}_${s.size}`]=0;}));
+const singleQty={};
+products.filter(p=>p.type==="single").forEach(p=>{singleQty[p.id]=0;});
+
+// 取貨日期驗證
+function validateDate(el){
+  const v=el.value;
+  if(!v) return;
+  const sel=new Date(v);
+  const today=new Date();today.setHours(0,0,0,0);
+  const minDate=new Date(today);minDate.setDate(minDate.getDate()+3);
+  const errEl=document.getElementById("err-date");
+  if(sel.getDay()===1){
+    errEl.textContent="週一公休，請選擇其他日期";
+    errEl.style.display="block";el.value="";return;
+  }
+  if(sel<minDate){
+    errEl.textContent="取貨日期需至少提前 3 天，如需更早取貨請私訊官方帳號";
+    errEl.style.display="block";el.value="";return;
+  }
+  errEl.style.display="none";
+}
 
 async function init(){
-  const d=new Date();d.setDate(d.getDate()+1);
+  const d=new Date();d.setDate(d.getDate()+3);
+  // 找到下一個非週一的日期
+  while(d.getDay()===1) d.setDate(d.getDate()+1);
   document.getElementById("pickupDate").min=d.toISOString().split("T")[0];
+
+  // LIFF（靜默初始化，不顯示任何狀態給顧客）
   try{
     const s=document.createElement("script");
     s.src="https://static.line-scdn.net/liff/edge/2/sdk.js";
-    s.onload=async()=>{try{await liff.init({liffId:LIFF_ID});if(liff.isLoggedIn()){const p=await liff.getProfile();lineUID=p.userId;dbg("✅ UID 取得成功");}else dbg("⚠️ 非 LINE 內開啟");}catch(e){dbg("⚠️ LIFF:"+e.message);}};
+    s.onload=async()=>{
+      try{
+        await liff.init({liffId:LIFF_ID});
+        if(liff.isLoggedIn()){const p=await liff.getProfile();lineUID=p.userId;}
+      }catch(e){}
+    };
     document.head.appendChild(s);
   }catch(e){}
-  try{
-    const r=await fetch(SHEET_API);
-    if(!r.ok)throw new Error("HTTP "+r.status);
-    const data=await r.json();
-    if(!Array.isArray(data)||data.length===0)throw new Error("空資料");
-    products=data.map(p=>({...p,img:IMG[p.id]||p.img||""}));
-    const a=products.find(p=>p.id==="A");
-    if(a&&!a.sizes.find(s=>s.size.includes("10-14")))a.sizes.push({size:"10-14吋客製化造型",price:0});
-    const f=products.find(p=>p.id==="F");
-    if(f&&f.price===0)f.price=280;
-    dbg("✅ 商品讀取成功："+products.length+" 筆");
-  }catch(e){dbg("⚠️ 使用預設商品");products=getDefault();}
+
   renderProducts();
   document.getElementById("loadingScreen").style.display="none";
   document.getElementById("formScreen").style.display="block";
@@ -285,39 +334,103 @@ async function init(){
 function renderProducts(){
   const cakes=products.filter(p=>p.type==="cake");
   const singles=products.filter(p=>p.type==="single");
+
   let ch="";
   cakes.forEach(p=>{
-    const imgEl=p.img?`<img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s" onerror="this.parentElement.innerHTML='<div class=prod-img-ph>🎂</div>'">`:`<div class="prod-img-ph">🎂</div>`;
+    const imgEl=p.img
+      ?`<img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.5s" onerror="this.parentElement.innerHTML='<div class=prod-img-ph>🎂</div>'">`
+      :`<div class="prod-img-ph">🎂</div>`;
     let sh="";
     p.sizes.forEach(s=>{
-      const k=`${p.id}_${s.size}`;cakeQty[k]=0;
+      const k=`${p.id}_${s.size}`;
       const pl=s.price>0?`NT$${s.price.toLocaleString()}`:"詢價";
-      sh+=`<div class="sz-row" id="row-${k}"><span class="sz-name">${s.size}</span><div style="display:flex;align-items:center"><span class="sz-price">${pl}</span><div class="qc"><button class="qb" onclick="changeCake('${k}',-1)">−</button><span class="qn" id="qty-${k}">0</span><button class="qb" onclick="changeCake('${k}',1)">+</button></div></div></div>`;
+      sh+=`<div class="sz-row" id="row-${k}">
+        <div class="sz-main">
+          <span class="sz-name">${s.size}</span>
+          ${s.hint?`<span class="sz-hint">${s.hint}</span>`:""}
+        </div>
+        <div style="display:flex;align-items:center">
+          <span class="sz-price">${pl}</span>
+          <div class="qc">
+            <button class="qb" onclick="changeCake('${k}',-1)">−</button>
+            <span class="qn" id="qty-${k}">0</span>
+            <button class="qb" onclick="changeCake('${k}',1)">+</button>
+          </div>
+        </div>
+      </div>`;
     });
-    ch+=`<div class="prod-card"><div class="prod-img-wrap">${imgEl}<div class="prod-tag">Fait maison</div></div><div class="prod-body"><div class="prod-name">${p.name}</div>${p.desc?`<div class="prod-desc">${p.desc}</div>`:""}<div class="sizes">${sh}</div></div></div>`;
+    ch+=`<div class="prod-card">
+      <div class="prod-img-wrap">${imgEl}</div>
+      <div class="prod-body">
+        <div class="prod-name">${p.name}</div>
+        ${p.desc?`<div class="prod-desc">${p.desc}</div>`:""}
+        <div class="sizes">${sh}</div>
+      </div>
+    </div>`;
   });
-  document.getElementById("cakeProducts").innerHTML=ch||"<div style='color:var(--text4);font-size:14px;text-align:center;padding:20px;font-style:italic'>暫無商品</div>";
+  document.getElementById("cakeProducts").innerHTML=ch;
 
   let sh="";
   singles.forEach(p=>{
-    singleQty[p.id]=0;
-    const imgEl=p.img?`<img class="si-img" src="${p.img}" alt="${p.name}" onerror="this.style.background='var(--cream2)'">`:`<div class="si-img" style="display:flex;align-items:center;justify-content:center;font-size:24px;background:var(--cream2)">🍮</div>`;
+    const imgEl=p.img
+      ?`<img class="si-img" src="${p.img}" alt="${p.name}" onerror="this.style.background='var(--cream2)'">`
+      :`<div class="si-img" style="display:flex;align-items:center;justify-content:center;font-size:24px;background:var(--cream2)">🍮</div>`;
     const pl=p.price>0?`NT$${p.price} / ${p.unit}`:"詢價";
-    sh+=`<div class="si-row" id="single-row-${p.id}"><div class="si-left">${imgEl}<div><div class="si-name">${p.name}</div><div class="si-price">${pl}</div></div></div><div class="qc"><button class="qb" onclick="changeSingle('${p.id}',-1)">−</button><span class="qn" id="qty-single-${p.id}">0</span><button class="qb" onclick="changeSingle('${p.id}',1)">+</button></div></div>`;
+    sh+=`<div class="si-row" id="single-row-${p.id}">
+      <div class="si-left">${imgEl}
+        <div><div class="si-name">${p.name}</div><div class="si-price">${pl}</div></div>
+      </div>
+      <div class="qc">
+        <button class="qb" onclick="changeSingle('${p.id}',-1)">−</button>
+        <span class="qn" id="qty-single-${p.id}">0</span>
+        <button class="qb" onclick="changeSingle('${p.id}',1)">+</button>
+      </div>
+    </div>`;
   });
   document.getElementById("singleProducts").innerHTML=sh;
 }
 
-function changeCake(k,d){cakeQty[k]=Math.max(0,(cakeQty[k]||0)+d);document.getElementById(`qty-${k}`).textContent=cakeQty[k];const r=document.getElementById(`row-${k}`);if(r)r.className="sz-row"+(cakeQty[k]>0?" on":"");updateSummary();}
-function changeSingle(id,d){singleQty[id]=Math.max(0,(singleQty[id]||0)+d);document.getElementById(`qty-single-${id}`).textContent=singleQty[id];const r=document.getElementById(`single-row-${id}`);if(r)r.className="si-row"+(singleQty[id]>0?" on":"");updateSummary();}
-function changeAddon(k,d){addonQty[k]=Math.max(0,addonQty[k]+d);document.getElementById(`qty-${k}`).textContent=addonQty[k];const r=document.getElementById(`${k}-row`);if(r)r.className="si-row"+(addonQty[k]>0?" on":"");updateSummary();}
+function changeCake(k,d){
+  cakeQty[k]=Math.max(0,(cakeQty[k]||0)+d);
+  document.getElementById(`qty-${k}`).textContent=cakeQty[k];
+  const r=document.getElementById(`row-${k}`);if(r)r.className="sz-row"+(cakeQty[k]>0?" on":"");
+  updateSummary();
+}
+function changeSingle(id,d){
+  singleQty[id]=Math.max(0,(singleQty[id]||0)+d);
+  document.getElementById(`qty-single-${id}`).textContent=singleQty[id];
+  const r=document.getElementById(`single-row-${id}`);if(r)r.className="si-row"+(singleQty[id]>0?" on":"");
+  updateSummary();
+}
+function changeAddon(k,d){
+  addonQty[k]=Math.max(0,addonQty[k]+d);
+  document.getElementById(`qty-${k}`).textContent=addonQty[k];
+  const r=document.getElementById(`${k}-row`);if(r)r.className="si-row"+(addonQty[k]>0?" on":"");
+  updateSummary();
+}
 
 function updateSummary(){
   let total=0,html="";
-  products.filter(p=>p.type==="cake").forEach(p=>{p.sizes.forEach(s=>{const q=cakeQty[`${p.id}_${s.size}`]||0;if(q>0){const sub=s.price*q;html+=`<div class="os-row"><span>${p.name} ${s.size}${q>1?` ×${q}`:""}</span><span>${s.price>0?`NT$${sub.toLocaleString()}`:"（詢價）"}</span></div>`;total+=sub;}});});
-  products.filter(p=>p.type==="single").forEach(p=>{const q=singleQty[p.id]||0;if(q>0){if(p.price>0){html+=`<div class="os-row"><span>${p.name} ×${q}</span><span>NT$${(p.price*q).toLocaleString()}</span></div>`;total+=p.price*q;}else{html+=`<div class="os-row"><span>${p.name} ×${q}</span><span>（詢價）</span></div>`;}}});
-  const pq=parseInt(document.getElementById("plate").value||0);
-  if(pq>0){html+=`<div class="os-row"><span>餐具 ×${pq}組</span><span>NT$${(pq*30).toLocaleString()}</span></div>`;total+=pq*30;}
+  products.filter(p=>p.type==="cake").forEach(p=>{
+    p.sizes.forEach(s=>{
+      const q=cakeQty[`${p.id}_${s.size}`]||0;
+      if(q>0){
+        const sub=s.price*q;
+        // 訂單只顯示尺寸，不顯示 hint
+        const label=`${p.name} ${s.size}${q>1?` ×${q}`:""}`;
+        html+=`<div class="os-row"><span>${label}</span><span>${s.price>0?`NT$${sub.toLocaleString()}`:"（詢價）"}</span></div>`;
+        total+=sub;
+      }
+    });
+  });
+  products.filter(p=>p.type==="single").forEach(p=>{
+    const q=singleQty[p.id]||0;
+    if(q>0){
+      if(p.price>0){html+=`<div class="os-row"><span>${p.name} ×${q}</span><span>NT$${(p.price*q).toLocaleString()}</span></div>`;total+=p.price*q;}
+      else{html+=`<div class="os-row"><span>${p.name} ×${q}</span><span>（詢價）</span></div>`;}
+    }
+  });
+  if(addonQty.plate>0){html+=`<div class="os-row"><span>餐具 ×${addonQty.plate}組</span><span>NT$${(addonQty.plate*30).toLocaleString()}</span></div>`;total+=addonQty.plate*30;}
   if(addonQty.bag>0){html+=`<div class="os-row"><span>保冷袋 ×${addonQty.bag}</span><span>NT$${(addonQty.bag*100).toLocaleString()}</span></div>`;total+=addonQty.bag*100;}
   document.getElementById("sumItems").innerHTML=html||'<div class="os-empty">尚未選擇任何品項</div>';
   document.getElementById("sumTotal").textContent=`NT$${total.toLocaleString()}`;
@@ -325,7 +438,12 @@ function updateSummary(){
 
 function validate(){
   let ok=true;
-  [["name","err-name"],["phone","err-phone"],["pickupDate","err-date"],["pickupTime","err-time"]].forEach(([id,err])=>{const v=document.getElementById(id).value.trim();document.getElementById(err).style.display=v?"none":"block";if(!v)ok=false;});
+  [["name","err-name"],["phone","err-phone"],["pickupDate","err-date"],["pickupTime","err-time"]].forEach(([id,err])=>{
+    const v=document.getElementById(id).value.trim();
+    if(id==="pickupDate"&&document.getElementById(err).style.display==="block"){ok=false;return;}
+    document.getElementById(err).style.display=v?"none":"block";
+    if(!v)ok=false;
+  });
   const hasCake=Object.values(cakeQty).some(q=>q>0);
   const hasSingle=Object.values(singleQty).some(q=>q>0);
   if(!hasCake&&!hasSingle){alert("請至少選擇一項商品！");ok=false;}
@@ -334,10 +452,21 @@ function validate(){
 
 function buildOrder(){
   let total=0;const items=[];
-  products.filter(p=>p.type==="cake").forEach(p=>{p.sizes.forEach(s=>{const q=cakeQty[`${p.id}_${s.size}`]||0;if(q>0){items.push({name:`${p.name} ${s.size}`,qty:q,price:s.price,sub:s.price*q});total+=s.price*q;}});});
-  products.filter(p=>p.type==="single").forEach(p=>{const q=singleQty[p.id]||0;if(q>0){items.push({name:p.name,qty:q,price:p.price,sub:p.price*q});total+=p.price*q;}});
-  const pq=parseInt(document.getElementById("plate").value||0);
-  if(pq>0){items.push({name:"餐具",qty:pq,price:30,sub:pq*30});total+=pq*30;}
+  products.filter(p=>p.type==="cake").forEach(p=>{
+    p.sizes.forEach(s=>{
+      const q=cakeQty[`${p.id}_${s.size}`]||0;
+      if(q>0){
+        // 訂單品項名稱不含 hint
+        items.push({name:`${p.name} ${s.size}`,qty:q,price:s.price,sub:s.price*q});
+        total+=s.price*q;
+      }
+    });
+  });
+  products.filter(p=>p.type==="single").forEach(p=>{
+    const q=singleQty[p.id]||0;
+    if(q>0){items.push({name:p.name,qty:q,price:p.price,sub:p.price*q});total+=p.price*q;}
+  });
+  if(addonQty.plate>0){items.push({name:"餐具",qty:addonQty.plate,price:30,sub:addonQty.plate*30});total+=addonQty.plate*30;}
   if(addonQty.bag>0){items.push({name:"保冷袋",qty:addonQty.bag,price:100,sub:addonQty.bag*100});total+=addonQty.bag*100;}
   return{lineUID,name:document.getElementById("name").value.trim(),phone:document.getElementById("phone").value.trim(),pickupDate:document.getElementById("pickupDate").value,pickupTime:document.getElementById("pickupTime").value,items,total,note:document.getElementById("note").value.trim(),timestamp:new Date().toLocaleString("zh-TW",{timeZone:"Asia/Taipei"})};
 }
@@ -351,7 +480,7 @@ async function submitForm(){
     document.getElementById("formScreen").style.display="none";
     document.getElementById("successScreen").style.display="block";
   }catch(e){
-    dbg("❌ "+e.message);alert("送出失敗，請再試一次");
+    alert("送出失敗，請再試一次");
     btn.disabled=false;btn.textContent="確認送出訂單";
   }
 }
