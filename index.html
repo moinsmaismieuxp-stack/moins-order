@@ -226,12 +226,13 @@ const LIFF_ID="2009889923-RxCLymLI";
 const GAS_URL="https://script.google.com/macros/s/AKfycbz-tLLmvmOGI0kocTaWRnT5ye3erx8rQoU5qDDAQ6GWTqLKU4OK3mxOvhP73C9NDsXk/exec";
 const SHEET_API="https://script.google.com/macros/s/AKfycbxV28fHfF8Z0yAGxextrDNcG7vZ05NjSyJ6ll7be-7Nt4mxvPsMeXQtJh2R_2j3JeDa/exec";
 const IMG={
-  A:"https://drive.google.com/uc?export=view&id=1z5mT9rD0mtPntbwjz6kgwzYZlH7M0hXJ",
-  B:"https://drive.google.com/uc?export=view&id=18pn-P_XsFh3V_xn4phZenPStxGamYgtK",
-  C:"https://drive.google.com/uc?export=view&id=1mNq4ac-gga1r4nuYIr5EGA6pJR4hgrEk",
-  D:"https://drive.google.com/uc?export=view&id=1t7sPv7FULak8j6qluyvgqR29vZa2G-Tq",
-  E:"https://drive.google.com/uc?export=view&id=16ExunqtAGhP6zE5GVIFQNarl8aBoLOYl",
-  F:"https://drive.google.com/uc?export=view&id=1IRiXyhdIEx5SMNFpOFqqRECT4_W8w0Nv"
+  A:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777188388/IMG_5846_5_hpci69.jpg",
+  B:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189282/IMG_8852_2_erdyqi.jpg",
+  C:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189362/IMG_8896_ureszj.jpg",
+  D:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189496/IMG_1843_okmpzf.jpg",
+  E:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189551/IMG_1923_fsytsg.jpg",
+  F:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189765/New_Project_dtrx89.jpg",
+  G:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189785/IMG_8842_e5l7cx.jpg"
 };
 
 let lineUID="",products=[];
@@ -248,6 +249,8 @@ function getDefault(){return[
     {size:"5吋（約3-4人）",price:1420},{size:"6吋（約6-8人）",price:1880},{size:"8吋（約7-10人）",price:2760}]},
   {id:"C",type:"cake",name:"季節夏洛特",desc:"蜜桃馬鞭草 ※草莓供應結束※",img:IMG.C,sizes:[
     {size:"4吋（約2-3人）",price:890},{size:"6吋（約6-8人）",price:1380},{size:"8吋（約7-10人）",price:1880}]},
+  {id:"G",type:"cake",name:"2026母親節限定花冠蛋糕",desc:"限量供應，售完為止",img:IMG.G,sizes:[
+    {size:"6吋（約6-8人）",price:1690}]},
   {id:"D",type:"single",name:"香草可麗露",desc:"",img:IMG.D,price:80,unit:"顆"},
   {id:"E",type:"single",name:"香香焦糖嫩布丁",desc:"",img:IMG.E,price:100,unit:"杯"},
   {id:"F",type:"single",name:"馬卡龍禮盒",desc:"",img:IMG.F,price:280,unit:"盒"}
