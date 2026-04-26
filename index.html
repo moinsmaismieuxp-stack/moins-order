@@ -132,11 +132,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
   </div>
 
   <div class="hero">
-    <div class="hero-ribbon">
-      <span class="hero-brand">簡法甜點</span>
-      <span class="hero-brand-sub">MOINS Pâtisserie</span>
-    </div>
-    <div class="hero-tagline">
+    <div class="hero-tagline" style="padding:32px 28px 28px">
       Ne nous compliquons pas la vie,<br>profitons de ce moment.
       <strong>Moins mais mieux.</strong>
     </div>
@@ -244,13 +240,13 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 const LIFF_ID="2009889923-RxCLymLI";
 const GAS_URL="https://script.google.com/macros/s/AKfycbz-tLLmvmOGI0kocTaWRnT5ye3erx8rQoU5qDDAQ6GWTqLKU4OK3mxOvhP73C9NDsXk/exec";
 const IMG={
-  A:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777188388/IMG_5846_5_hpci69.jpg",
-  B:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189282/IMG_8852_2_erdyqi.jpg",
-  C:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189362/IMG_8896_ureszj.jpg",
+  A:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195552/3_epdfnk.png",
+  B:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195550/1_xcs2sq.png",
+  C:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195553/2_md6ph1.png",
   D:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189496/IMG_1843_okmpzf.jpg",
   E:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189551/IMG_1923_fsytsg.jpg",
   F:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189765/New_Project_dtrx89.jpg",
-  G:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189785/IMG_8842_e5l7cx.jpg"
+  G:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195545/4_lrjyv1.png"
 };
 
 let lineUID="";
@@ -268,19 +264,19 @@ const products=[
   {id:"G",type:"cake",name:"2026母親節限定花冠蛋糕",desc:"限量供應，售完為止",img:IMG.G,sizes:[
     {size:"6吋",hint:"約6-8人",price:1690}
   ]},
-  {id:"B",type:"cake",name:"季節花束夏洛特",desc:"蜜桃馬鞭草 ※草莓供應結束※",img:IMG.B,sizes:[
+  {id:"B",type:"cake",name:"季節花束夏洛特",desc:"蜜桃馬鞭草",img:IMG.B,sizes:[
     {size:"5吋",hint:"約3-4人",price:1420},
     {size:"6吋",hint:"約6-8人",price:1880},
     {size:"8吋",hint:"約7-10人",price:2760}
   ]},
-  {id:"C",type:"cake",name:"季節夏洛特",desc:"蜜桃馬鞭草 ※草莓供應結束※",img:IMG.C,sizes:[
+  {id:"C",type:"cake",name:"季節夏洛特",desc:"蜜桃馬鞭草",img:IMG.C,sizes:[
     {size:"4吋",hint:"約2-3人",price:890},
     {size:"6吋",hint:"約6-8人",price:1380},
     {size:"8吋",hint:"約7-10人",price:1880}
   ]},
   {id:"D",type:"single",name:"香草可麗露",desc:"",img:IMG.D,price:80,unit:"顆"},
-  {id:"E",type:"single",name:"香香焦糖嫩布丁",desc:"",img:IMG.E,price:100,unit:"杯"},
-  {id:"F",type:"single",name:"馬卡龍禮盒",desc:"",img:IMG.F,price:280,unit:"盒"}
+  {id:"E",type:"single",name:"焦糖嫩布丁",desc:"",img:IMG.E,price:90,unit:"杯"},
+  {id:"F",type:"single",name:"3入馬卡龍禮盒",desc:"",img:IMG.F,price:260,unit:"盒"}
 ];
 
 const cakeQty={};
