@@ -378,19 +378,24 @@ function submitForm(){
   var encoded=encodeURIComponent(json);
   var url=GAS_URL+"?order="+encoded;
 
-  var xhr=new XMLHttpRequest();
-  xhr.open("GET",url,true);
-  xhr.onreadystatechange=function(){
-    if(xhr.readyState===4){
-      document.getElementById("formScreen").style.display="none";
-      document.getElementById("successScreen").style.display="block";
-    }
-  };
-  xhr.onerror=function(){
-    document.getElementById("formScreen").style.display="none";
-    document.getElementById("successScreen").style.display="block";
-  };
-  xhr.send();
+  // 方法1: XMLHttpRequest
+  try {
+    var xhr=new XMLHttpRequest();
+    xhr.open("GET",url,true);
+    xhr.send();
+    alert("XHR 已送出，狀態："+xhr.status);
+  } catch(e1) {
+    alert("XHR 失敗："+e1.message);
+  }
+
+  // 方法2: Image beacon
+  try {
+    var img=new Image();
+    img.src=url;
+    alert("Image beacon 已送出");
+  } catch(e2) {
+    alert("Image beacon 失敗："+e2.message);
+  }
 
   setTimeout(function(){
     document.getElementById("formScreen").style.display="none";
