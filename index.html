@@ -472,7 +472,12 @@ async function submitForm(){
   const btn=document.getElementById("submitBtn");
   btn.disabled=true;btn.textContent="送出中⋯";
   try{
-    await fetch(GAS_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(buildOrder())});
+    const order = buildOrder();
+    await fetch(GAS_URL, {
+      method: "POST",
+      headers: {"Content-Type": "text/plain"},
+      body: JSON.stringify(order)
+    });
     document.getElementById("formScreen").style.display="none";
     document.getElementById("successScreen").style.display="block";
   }catch(e){
