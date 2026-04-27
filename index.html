@@ -474,9 +474,11 @@ async function submitForm(){
   try{
     const order = buildOrder();
     const params = encodeURIComponent(JSON.stringify(order));
-    const img = new Image();
-    img.src = GAS_URL + "?order=" + params;
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await fetch(GAS_URL + "?order=" + params, {
+      method: "GET",
+      mode: "no-cors"
+    });
+    await new Promise(resolve => setTimeout(resolve, 1500));
     document.getElementById("formScreen").style.display="none";
     document.getElementById("successScreen").style.display="block";
   }catch(e){
