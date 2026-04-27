@@ -474,10 +474,9 @@ async function submitForm(){
   try{
     const order = buildOrder();
     const params = encodeURIComponent(JSON.stringify(order));
-    await fetch(GAS_URL + "?order=" + params, {
-      method: "GET",
-      mode: "no-cors"
-    });
+    const url = GAS_URL + "?order=" + params;
+    alert("送出網址長度：" + url.length + "\n前100字：" + url.substring(0, 100));
+    await fetch(url, { method: "GET", mode: "no-cors" });
     await new Promise(resolve => setTimeout(resolve, 1500));
     document.getElementById("formScreen").style.display="none";
     document.getElementById("successScreen").style.display="block";
