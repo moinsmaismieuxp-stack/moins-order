@@ -238,7 +238,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 
 <script>
 const LIFF_ID="2009889923-RxCLymLI";
-const GAS_URL="https://script.google.com/macros/s/AKfycbyLWApAz8qv0_j-hUImNyUB5iYl5YxIJVYPyzzWd9xh_lrLBDSBERkDYvw29L1hMA72/exec";
+const GAS_URL="https://script.google.com/macros/s/AKfycbyroEZI6HM2F8Qzseldyn8YgaJpZKXvgwrSnEGIe49z-0dmPTzy3tBho-EOz2_fXpis/exec";
 const IMG={
   A:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195552/3_epdfnk.png",
   B:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195550/1_xcs2sq.png",
@@ -473,10 +473,12 @@ async function submitForm(){
   btn.disabled=true;btn.textContent="送出中⋯";
   try{
     const order = buildOrder();
+    const formData = new URLSearchParams();
+    formData.append("data", JSON.stringify(order));
     await fetch(GAS_URL, {
       method: "POST",
-      headers: {"Content-Type": "text/plain"},
-      body: JSON.stringify(order)
+      mode: "no-cors",
+      body: formData
     });
     document.getElementById("formScreen").style.display="none";
     document.getElementById("successScreen").style.display="block";
