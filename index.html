@@ -199,7 +199,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 
 <script>
 var LIFF_ID = "2009889923-RxCLymLI";
-var GAS_URL = "https://script.google.com/macros/s/AKfycbynCw5sdnUooNQssLznyNJuOSALIdUS_t8xDPBmAsm7bGvk09WrFCHhRyBzs0RX3TYL/exec";
+var GAS_URL = "https://script.google.com/macros/s/AKfycbzogxapSS9UZ4wJF9kNF59Y4gC-w8yHFXL4Ojy8WYvUOYOe5dmdtk3aB-IdyaaaVm4A/exec";
 var IMG = {
   A:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195552/3_epdfnk.png",
   B:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195550/1_xcs2sq.png",
@@ -374,33 +374,18 @@ function submitForm(){
   btn.disabled=true;btn.textContent="送出中⋯";
 
   var order=buildOrder();
-  var json=JSON.stringify(order);
-  var encoded=encodeURIComponent(json);
-  var url=GAS_URL+"?order="+encoded;
 
-  // 方法1: XMLHttpRequest
-  try {
-    var xhr=new XMLHttpRequest();
-    xhr.open("GET",url,true);
-    xhr.send();
-    alert("XHR 已送出，狀態："+xhr.status);
-  } catch(e1) {
-    alert("XHR 失敗："+e1.message);
-  }
-
-  // 方法2: Image beacon
-  try {
-    var img=new Image();
-    img.src=url;
-    alert("Image beacon 已送出");
-  } catch(e2) {
-    alert("Image beacon 失敗："+e2.message);
-  }
+  fetch(GAS_URL,{
+    method:"POST",
+    mode:"no-cors",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(order)
+  }).catch(function(){});
 
   setTimeout(function(){
     document.getElementById("formScreen").style.display="none";
     document.getElementById("successScreen").style.display="block";
-  },3000);
+  },2000);
 }
 
 init();
