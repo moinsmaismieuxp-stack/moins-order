@@ -475,9 +475,12 @@ async function submitForm(){
     const order = buildOrder();
     const params = encodeURIComponent(JSON.stringify(order));
     const url = GAS_URL + "?order=" + params;
-    alert("送出網址長度：" + url.length + "\n前100字：" + url.substring(0, 100));
-    await fetch(url, { method: "GET", mode: "no-cors" });
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = url;
+    document.body.appendChild(iframe);
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    document.body.removeChild(iframe);
     document.getElementById("formScreen").style.display="none";
     document.getElementById("successScreen").style.display="block";
   }catch(e){
