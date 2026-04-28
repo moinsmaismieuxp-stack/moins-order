@@ -343,26 +343,73 @@ function validate(){
 }
 
 function buildOrder(){
-  var total=0,items=[];
+  var total=0,items=[],flexItems=[];
   products.filter(function(p){return p.type==="cake";}).forEach(function(p){
     p.sizes.forEach(function(s){
       var q=cakeQty[p.id+"_"+s.size]||0;
-      if(q>0){items.push({name:p.name+" "+s.size,qty:q,price:s.price,sub:s.price*q});total+=s.price*q;}
+      if(q>0){
+        var itemName=p.name+" "+s.size+(q>1?" ×"+q:"");
+        var itemSub=s.price*q;
+        items.push({name:p.name+" "+s.size,qty:q,price:s.price,sub:itemSub});
+        total+=itemSub;
+        flexItems.push({
+          type:"box",layout:"horizontal",
+          contents:[
+            {type:"text",text:itemName,size:"sm",color:"#3e4455",flex:3,wrap:true},
+            {type:"text",text:s.price>0?"NT$"+itemSub.toLocaleString():"詢價",size:"sm",color:"#3a4258",weight:"bold",flex:2,align:"end"}
+          ]
+        });
+      }
     });
   });
   products.filter(function(p){return p.type==="single";}).forEach(function(p){
     var q=singleQty[p.id]||0;
-    if(q>0){items.push({name:p.name,qty:q,price:p.price,sub:p.price*q});total+=p.price*q;}
+    if(q>0){
+      var itemSub=p.price*q;
+      items.push({name:p.name,qty:q,price:p.price,sub:itemSub});
+      total+=itemSub;
+      flexItems.push({
+        type:"box",layout:"horizontal",
+        contents:[
+          {type:"text",text:p.name+(q>1?" ×"+q:""),size:"sm",color:"#3e4455",flex:3,wrap:true},
+          {type:"text",text:p.price>0?"NT$"+itemSub.toLocaleString():"詢價",size:"sm",color:"#3a4258",weight:"bold",flex:2,align:"end"}
+        ]
+      });
+    }
   });
-  if(addonQty.plate>0){items.push({name:"餐具",qty:addonQty.plate,price:30,sub:addonQty.plate*30});total+=addonQty.plate*30;}
-  if(addonQty.bag>0){items.push({name:"保冷袋",qty:addonQty.bag,price:100,sub:addonQty.bag*100});total+=addonQty.bag*100;}
+  if(addonQty.plate>0){
+    var plateSub=addonQty.plate*30;
+    items.push({name:"餐具",qty:addonQty.plate,price:30,sub:plateSub});
+    total+=plateSub;
+    flexItems.push({
+      type:"box",layout:"horizontal",
+      contents:[
+        {type:"text",text:"餐具"+(addonQty.plate>1?" ×"+addonQty.plate:""),size:"sm",color:"#3e4455",flex:3,wrap:true},
+        {type:"text",text:"NT$"+plateSub.toLocaleString(),size:"sm",color:"#3a4258",weight:"bold",flex:2,align:"end"}
+      ]
+    });
+  }
+  if(addonQty.bag>0){
+    var bagSub=addonQty.bag*100;
+    items.push({name:"保冷袋",qty:addonQty.bag,price:100,sub:bagSub});
+    total+=bagSub;
+    flexItems.push({
+      type:"box",layout:"horizontal",
+      contents:[
+        {type:"text",text:"保冷袋"+(addonQty.bag>1?" ×"+addonQty.bag:""),size:"sm",color:"#3e4455",flex:3,wrap:true},
+        {type:"text",text:"NT$"+bagSub.toLocaleString(),size:"sm",color:"#3a4258",weight:"bold",flex:2,align:"end"}
+      ]
+    });
+  }
   return {
     lineUID:lineUID,
     name:document.getElementById("name").value.trim(),
     phone:document.getElementById("phone").value.trim(),
     pickupDate:document.getElementById("pickupDate").value,
     pickupTime:document.getElementById("pickupTime").value,
-    items:items,total:total,
+    items:items,
+    flexItems:flexItems,
+    total:total,
     note:document.getElementById("note").value.trim(),
     timestamp:new Date().toLocaleString("zh-TW",{timeZone:"Asia/Taipei"})
   };
