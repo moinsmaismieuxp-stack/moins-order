@@ -402,17 +402,20 @@ function buildOrder(){
     });
   }
   return {
-    lineUID:lineUID,
-    name:document.getElementById("name").value.trim(),
-    phone:document.getElementById("phone").value.trim(),
-    pickupDate:document.getElementById("pickupDate").value,
-    pickupTime:document.getElementById("pickupTime").value,
-    items:items,
-    flexItems:flexItems,
-    total:total,
-    note:document.getElementById("note").value.trim(),
-    timestamp:new Date().toLocaleString("zh-TW",{timeZone:"Asia/Taipei"})
-  };
+  lineUID:lineUID,
+  name:document.getElementById("name").value.trim(),
+  phone:document.getElementById("phone").value.trim(),
+  pickupDate:document.getElementById("pickupDate").value,
+  pickupTime:document.getElementById("pickupTime").value,
+  items:items,
+  flexItems:flexItems,
+  itemsText:items.map(function(i){
+    return i.name+" x"+i.qty+(i.price>0?"　NT$"+i.sub.toLocaleString():"　詢價");
+  }).join("\n"),
+  total:total,
+  note:document.getElementById("note").value.trim(),
+  timestamp:new Date().toLocaleString("zh-TW",{timeZone:"Asia/Taipei"})
+};
 }
 
 function submitForm(){
