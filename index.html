@@ -199,7 +199,7 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 
 <script>
 var LIFF_ID = "2009889923-RxCLymLI";
-var GAS_URL = "https://script.google.com/macros/s/AKfycbzogxapSS9UZ4wJF9kNF59Y4gC-w8yHFXL4Ojy8WYvUOYOe5dmdtk3aB-IdyaaaVm4A/exec";
+var MAKE_WEBHOOK = "https://hook.us2.make.com/fpcu89l7brk5vecc7mjs9041ezklb7yh";
 var IMG = {
   A:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195552/3_epdfnk.png",
   B:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195550/1_xcs2sq.png",
@@ -372,19 +372,18 @@ function submitForm(){
   if(!validate())return;
   var btn=document.getElementById("submitBtn");
   btn.disabled=true;btn.textContent="送出中⋯";
-
   var order=buildOrder();
-
-  fetch(GAS_URL,{
+  fetch(MAKE_WEBHOOK,{
     method:"POST",
-    headers:{"Content-Type":"text/plain;charset=utf-8"},
+    headers:{"Content-Type":"application/json"},
     body:JSON.stringify(order)
   }).then(function(){
     document.getElementById("formScreen").style.display="none";
     document.getElementById("successScreen").style.display="block";
-  }).catch(function(){
-    document.getElementById("formScreen").style.display="none";
-    document.getElementById("successScreen").style.display="block";
+  }).catch(function(e){
+    alert("送出失敗："+e.message);
+    btn.disabled=false;
+    btn.textContent="確認送出訂單";
   });
 }
 
