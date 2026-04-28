@@ -408,7 +408,7 @@ function buildOrder(){
   pickupDate:document.getElementById("pickupDate").value,
   pickupTime:document.getElementById("pickupTime").value,
   items:items,
-  flexItems:flexItems,
+  flexItems:JSON.stringify(flexItems),
   itemsText:items.map(function(i){
     return i.name+" x"+i.qty+(i.price>0?"　NT$"+i.sub.toLocaleString():"　詢價");
   }).join("\n"),
