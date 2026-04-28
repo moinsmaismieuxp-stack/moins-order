@@ -406,6 +406,7 @@ function validate(){
   }
 return {
     lineUID:lineUID,
+    orderID:orderID,
     name:document.getElementById("name").value.trim(),
     phone:document.getElementById("phone").value.trim(),
     pickupDate:document.getElementById("pickupDate").value,
@@ -418,7 +419,7 @@ return {
       type:"box",layout:"vertical",backgroundColor:"#faf8f2",paddingAll:"16px",spacing:"md",
       contents:[
         {type:"text",text:"親愛的 "+document.getElementById("name").value.trim()+"，您的訂單已收到！",size:"sm",color:"#3e4455",wrap:true},
-        {type:"text",text:"訂單編號 載入中",size:"xs",color:"#8890a8"},
+        {type:"text",text:"訂單編號 "+orderID,size:"xs",color:"#8890a8"},
         {type:"separator",color:"#e4ddd0"},
         {type:"text",text:"訂購明細",size:"xs",color:"#8890a8",weight:"bold"}
       ].concat(flexItems).concat([
