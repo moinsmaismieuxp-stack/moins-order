@@ -342,7 +342,7 @@ function validate(){
   return ok;
 }
 
-  function buildOrder(){
+function buildOrder(){
   var now=new Date();
   var pad=function(n){return n<10?"0"+n:n;};
   var orderID="ORD-"+now.getFullYear()+pad(now.getMonth()+1)+pad(now.getDate())+pad(now.getHours())+pad(now.getMinutes());
@@ -384,33 +384,32 @@ function validate(){
     var plateSub=addonQty.plate*30;
     items.push({name:"餐具",qty:addonQty.plate,price:30,sub:plateSub});
     total+=plateSub;
-    flexItems.push({
-      type:"box",layout:"horizontal",
-      contents:[
-        {type:"text",text:"餐具"+(addonQty.plate>1?" ×"+addonQty.plate:""),size:"sm",color:"#3e4455",flex:3,wrap:true},
-        {type:"text",text:"NT$"+plateSub.toLocaleString(),size:"sm",color:"#3a4258",weight:"bold",flex:2,align:"end"}
-      ]
-    });
+    flexItems.push({type:"box",layout:"horizontal",contents:[
+      {type:"text",text:"餐具"+(addonQty.plate>1?" ×"+addonQty.plate:""),size:"sm",color:"#3e4455",flex:3,wrap:true},
+      {type:"text",text:"NT$"+plateSub.toLocaleString(),size:"sm",color:"#3a4258",weight:"bold",flex:2,align:"end"}
+    ]});
   }
   if(addonQty.bag>0){
     var bagSub=addonQty.bag*100;
     items.push({name:"保冷袋",qty:addonQty.bag,price:100,sub:bagSub});
     total+=bagSub;
-    flexItems.push({
-      type:"box",layout:"horizontal",
-      contents:[
-        {type:"text",text:"保冷袋"+(addonQty.bag>1?" ×"+addonQty.bag:""),size:"sm",color:"#3e4455",flex:3,wrap:true},
-        {type:"text",text:"NT$"+bagSub.toLocaleString(),size:"sm",color:"#3a4258",weight:"bold",flex:2,align:"end"}
-      ]
-    });
+    flexItems.push({type:"box",layout:"horizontal",contents:[
+      {type:"text",text:"保冷袋"+(addonQty.bag>1?" ×"+addonQty.bag:""),size:"sm",color:"#3e4455",flex:3,wrap:true},
+      {type:"text",text:"NT$"+bagSub.toLocaleString(),size:"sm",color:"#3a4258",weight:"bold",flex:2,align:"end"}
+    ]});
   }
-return {
+  var name=document.getElementById("name").value.trim();
+  var phone=document.getElementById("phone").value.trim();
+  var pickupDate=document.getElementById("pickupDate").value;
+  var pickupTime=document.getElementById("pickupTime").value;
+  var note=document.getElementById("note").value.trim();
+  return {
     lineUID:lineUID,
     orderID:orderID,
-    name:document.getElementById("name").value.trim(),
-    phone:document.getElementById("phone").value.trim(),
-    pickupDate:document.getElementById("pickupDate").value,
-    pickupTime:document.getElementById("pickupTime").value,
+    name:name,
+    phone:phone,
+    pickupDate:pickupDate,
+    pickupTime:pickupTime,
     items:items,
     itemsText:items.map(function(i){
       return i.name+" x"+i.qty+(i.price>0?"　NT$"+i.sub.toLocaleString():"　詢價");
@@ -418,7 +417,7 @@ return {
     flexBody:JSON.stringify({
       type:"box",layout:"vertical",backgroundColor:"#faf8f2",paddingAll:"16px",spacing:"md",
       contents:[
-        {type:"text",text:"親愛的 "+document.getElementById("name").value.trim()+"，您的訂單已收到！",size:"sm",color:"#3e4455",wrap:true},
+        {type:"text",text:"親愛的 "+name+"，您的訂單已收到！",size:"sm",color:"#3e4455",wrap:true},
         {type:"text",text:"訂單編號 "+orderID,size:"xs",color:"#8890a8"},
         {type:"separator",color:"#e4ddd0"},
         {type:"text",text:"訂購明細",size:"xs",color:"#8890a8",weight:"bold"}
@@ -429,22 +428,44 @@ return {
         ]},
         {type:"separator",color:"#e4ddd0"},
         {type:"text",text:"取貨資訊",size:"xs",color:"#8890a8",weight:"bold"},
-        {type:"box",layout:"horizontal",contents:[{type:"text",text:"取貨日期",size:"sm",color:"#8890a8",flex:2},{type:"text",text:document.getElementById("pickupDate").value,size:"sm",color:"#2a2e3a",flex:3}]},
-        {type:"box",layout:"horizontal",contents:[{type:"text",text:"取貨時間",size:"sm",color:"#8890a8",flex:2},{type:"text",text:document.getElementById("pickupTime").value,size:"sm",color:"#2a2e3a",flex:3}]},
+        {type:"box",layout:"horizontal",contents:[
+          {type:"text",text:"取貨日期",size:"sm",color:"#8890a8",flex:2},
+          {type:"text",text:pickupDate,size:"sm",color:"#2a2e3a",flex:3}
+        ]},
+        {type:"box",layout:"horizontal",contents:[
+          {type:"text",text:"取貨時間",size:"sm",color:"#8890a8",flex:2},
+          {type:"text",text:pickupTime,size:"sm",color:"#2a2e3a",flex:3}
+        ]},
+        {type:"box",layout:"horizontal",contents:[
+          {type:"text",text:"聯繫電話",size:"sm",color:"#8890a8",flex:2},
+          {type:"text",text:phone,size:"sm",color:"#2a2e3a",flex:3,weight:"bold"}
+        ]},
         {type:"separator",color:"#e4ddd0"},
         {type:"text",text:"匯款資訊",size:"xs",color:"#8890a8",weight:"bold"},
-        {type:"box",layout:"horizontal",contents:[{type:"text",text:"銀行",size:"sm",color:"#8890a8",flex:2},{type:"text",text:"808 玉山銀行藝文分行",size:"sm",color:"#2a2e3a",flex:3,wrap:true}]},
-        {type:"box",layout:"horizontal",contents:[{type:"text",text:"帳號",size:"sm",color:"#8890a8",flex:2},{type:"text",text:"1322940026733",size:"sm",color:"#2a2e3a",flex:3}]},
-        {type:"box",layout:"horizontal",contents:[{type:"text",text:"戶名",size:"sm",color:"#8890a8",flex:2},{type:"text",text:"簡加商行簡啟評",size:"sm",color:"#2a2e3a",flex:3}]},
-        {type:"box",layout:"horizontal",contents:[{type:"text",text:"金額",size:"sm",color:"#8890a8",flex:2},{type:"text",text:"NT$"+total.toLocaleString(),size:"sm",color:"#3a4258",weight:"bold",flex:3}]},
-        {type:"text",text:"備註："+(document.getElementById("note").value.trim()||"（無備註）"),size:"xs",color:"#3e4455",wrap:true},
+        {type:"box",layout:"horizontal",contents:[
+          {type:"text",text:"銀行",size:"sm",color:"#8890a8",flex:2},
+          {type:"text",text:"808 玉山銀行藝文分行",size:"sm",color:"#2a2e3a",flex:3,wrap:true}
+        ]},
+        {type:"box",layout:"horizontal",contents:[
+          {type:"text",text:"帳號",size:"sm",color:"#8890a8",flex:2},
+          {type:"button",action:{type:"clipboard",label:"1322940026733",clipboardText:"1322940026733"},style:"primary",color:"#3a4258",height:"sm",flex:3}
+        ]},
+        {type:"box",layout:"horizontal",contents:[
+          {type:"text",text:"戶名",size:"sm",color:"#8890a8",flex:2},
+          {type:"text",text:"簡加商行簡啟評",size:"sm",color:"#2a2e3a",flex:3}
+        ]},
+        {type:"box",layout:"horizontal",contents:[
+          {type:"text",text:"金額",size:"sm",color:"#8890a8",flex:2},
+          {type:"text",text:"NT$"+total.toLocaleString(),size:"sm",color:"#3a4258",weight:"bold",flex:3}
+        ]},
+        {type:"text",text:"備註："+(note||"（無備註）"),size:"xs",color:"#3e4455",wrap:true},
         {type:"box",layout:"vertical",backgroundColor:"#f2ece0",borderColor:"#c8b898",borderWidth:"2px",cornerRadius:"4px",paddingAll:"10px",contents:[
           {type:"text",text:"請於完成匯款後，回傳匯款截圖或帳號後五碼，感謝您的支持 ♥",size:"xs",color:"#5c6275",wrap:true}
         ]}
       ])
     }),
     total:total,
-    note:document.getElementById("note").value.trim(),
+    note:note,
     timestamp:new Date().toLocaleString("zh-TW",{timeZone:"Asia/Taipei"})
   };
 }
