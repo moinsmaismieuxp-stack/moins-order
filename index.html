@@ -42,12 +42,15 @@ textarea{resize:vertical;min-height:90px;line-height:1.6}
 .field-note{font-size:11px;color:var(--text3);margin-top:5px;font-style:italic;line-height:1.5}
 .prod-card{margin-bottom:20px;border-radius:12px;overflow:hidden;border:1px solid var(--cream3);background:var(--w)}
 .prod-card:last-child{margin-bottom:0}
+.prod-card.soldout{opacity:0.7}
 .prod-img-wrap{position:relative;width:100%;aspect-ratio:4/3;background:var(--cream2);overflow:hidden}
 .prod-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.prod-img-wrap img.grayscale{filter:grayscale(40%)}
 .prod-img-ph{width:100%;height:100%;background:linear-gradient(135deg,var(--cream2),var(--tan4));display:flex;align-items:center;justify-content:center;font-size:56px}
 .prod-body{padding:18px 20px 20px}
 .prod-name{font-family:'Playfair Display',serif;font-size:17px;color:var(--navy);margin-bottom:5px;font-weight:500}
 .prod-desc{font-size:12px;color:var(--text3);font-style:italic;margin-bottom:16px}
+.soldout-msg{background:var(--tan4);border:1px solid var(--tan);border-radius:8px;padding:14px 16px;text-align:center;font-size:14px;color:var(--text3);letter-spacing:0.5px}
 .sizes{display:flex;flex-direction:column;gap:9px}
 .sz-row{display:flex;align-items:center;justify-content:space-between;padding:12px 15px;border-radius:8px;border:1px solid var(--cream3);background:var(--cream);transition:all 0.2s}
 .sz-row.on{border-color:var(--navy3);background:var(--tan4)}
@@ -220,7 +223,7 @@ var products = [
     {size:"7吋愛心造型",hint:"",price:1880},
     {size:"10-14吋客製化造型",hint:"",price:0}
   ]},
-  {id:"G",type:"cake",name:"2026母親節限定花冠蛋糕",desc:"限量供應，售完為止",img:IMG.G,sizes:[
+  {id:"G",type:"cake",name:"2026母親節限定花冠蛋糕",desc:"限量供應，售完為止",img:IMG.G,soldout:true,sizes:[
     {size:"6吋",hint:"約6-8人",price:1690}
   ]},
   {id:"B",type:"cake",name:"季節花束夏洛特",desc:"蜜桃馬鞭草",img:IMG.B,sizes:[
@@ -239,7 +242,7 @@ var products = [
 ];
 
 var cakeQty = {};
-products.filter(function(p){return p.type==="cake";}).forEach(function(p){
+products.filter(function(p){return p.type==="cake"&&!p.soldout;}).forEach(function(p){
   p.sizes.forEach(function(s){ cakeQty[p.id+"_"+s.size] = 0; });
 });
 var singleQty = {};
@@ -283,14 +286,20 @@ function renderProducts() {
   var singles = products.filter(function(p){return p.type==="single";});
   var ch = "";
   cakes.forEach(function(p) {
-    var imgEl = p.img ? '<img src="'+p.img+'" alt="'+p.name+'" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.parentElement.innerHTML=\'<div class=prod-img-ph>🎂</div>\'">' : '<div class="prod-img-ph">🎂</div>';
-    var sh = "";
-    p.sizes.forEach(function(s) {
-      var k = p.id+"_"+s.size;
-      var pl = s.price>0 ? "NT$"+s.price.toLocaleString() : "詢價";
-      sh += '<div class="sz-row" id="row-'+k+'"><div class="sz-main"><span class="sz-name">'+s.size+'</span>'+(s.hint?'<span class="sz-hint">'+s.hint+'</span>':'')+'</div><div style="display:flex;align-items:center"><span class="sz-price">'+pl+'</span><div class="qc"><button class="qb" onclick="changeCake(\''+k+'\',-1)">−</button><span class="qn" id="qty-'+k+'">0</span><button class="qb" onclick="changeCake(\''+k+'\',1)">+</button></div></div></div>';
-    });
-    ch += '<div class="prod-card"><div class="prod-img-wrap">'+imgEl+'</div><div class="prod-body"><div class="prod-name">'+p.name+'</div>'+(p.desc?'<div class="prod-desc">'+p.desc+'</div>':'')+'<div class="sizes">'+sh+'</div></div></div>';
+    var imgEl = p.img ? '<img src="'+p.img+'" alt="'+p.name+'"'+(p.soldout?' class="grayscale"':'')+' style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" onerror="this.parentElement.innerHTML=\'<div class=prod-img-ph>🎂</div>\'">' : '<div class="prod-img-ph">🎂</div>';
+    var bodyContent = "";
+    if(p.soldout){
+      bodyContent = '<div class="soldout-msg">已全數售罄，謝謝支持 ❤️</div>';
+    } else {
+      var sh = "";
+      p.sizes.forEach(function(s) {
+        var k = p.id+"_"+s.size;
+        var pl = s.price>0 ? "NT$"+s.price.toLocaleString() : "詢價";
+        sh += '<div class="sz-row" id="row-'+k+'"><div class="sz-main"><span class="sz-name">'+s.size+'</span>'+(s.hint?'<span class="sz-hint">'+s.hint+'</span>':'')+'</div><div style="display:flex;align-items:center"><span class="sz-price">'+pl+'</span><div class="qc"><button class="qb" onclick="changeCake(\''+k+'\',-1)">−</button><span class="qn" id="qty-'+k+'">0</span><button class="qb" onclick="changeCake(\''+k+'\',1)">+</button></div></div></div>';
+      });
+      bodyContent = '<div class="sizes">'+sh+'</div>';
+    }
+    ch += '<div class="prod-card'+(p.soldout?' soldout':'')+'"><div class="prod-img-wrap">'+imgEl+'</div><div class="prod-body"><div class="prod-name">'+p.name+'</div>'+(p.desc?'<div class="prod-desc">'+p.desc+'</div>':'')+bodyContent+'</div></div>';
   });
   document.getElementById("cakeProducts").innerHTML = ch;
 
@@ -310,7 +319,7 @@ function changeAddon(k,d){addonQty[k]=Math.max(0,addonQty[k]+d);document.getElem
 
 function updateSummary(){
   var total=0,html="";
-  products.filter(function(p){return p.type==="cake";}).forEach(function(p){
+  products.filter(function(p){return p.type==="cake"&&!p.soldout;}).forEach(function(p){
     p.sizes.forEach(function(s){
       var q=cakeQty[p.id+"_"+s.size]||0;
       if(q>0){var sub=s.price*q;html+='<div class="os-row"><span>'+p.name+' '+s.size+(q>1?' ×'+q:'')+'</span><span>'+(s.price>0?'NT$'+sub.toLocaleString():'（詢價）')+'</span></div>';total+=sub;}
@@ -347,7 +356,7 @@ function buildOrder(){
   var pad=function(n){return n<10?"0"+n:n;};
   var orderID="ORD-"+now.getFullYear()+pad(now.getMonth()+1)+pad(now.getDate())+pad(now.getHours())+pad(now.getMinutes());
   var total=0,items=[],flexItems=[];
-  products.filter(function(p){return p.type==="cake";}).forEach(function(p){
+  products.filter(function(p){return p.type==="cake"&&!p.soldout;}).forEach(function(p){
     p.sizes.forEach(function(s){
       var q=cakeQty[p.id+"_"+s.size]||0;
       if(q>0){
