@@ -429,7 +429,7 @@ function buildOrder(){
     return i.name+(i.qty>1?" ×"+i.qty:"");
   }).join("\n");
 
-  var copyText = pickupDateShort+"　"+pickupTime+"\n"+name+"　"+phone+"\n"+itemLines+"\nℹ️官：";
+  var copyText = "(已付)"+pickupDateShort+"　"+pickupTime+"\n"+name+"　"+phone+"\n"+itemLines+"\nℹ️官：";
 
   return {
     lineUID:lineUID,
