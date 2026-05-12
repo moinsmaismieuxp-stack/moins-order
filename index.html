@@ -204,6 +204,7 @@ var IMG = {
   A:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195552/3_epdfnk.png",
   B:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195550/1_xcs2sq.png",
   C:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777195553/2_md6ph1.png",
+  H:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1778561289/%E7%B6%B2%E7%AB%99%E7%85%A7%E7%89%879001200_c2q9kr.png",
   D:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189496/IMG_1843_okmpzf.jpg",
   E:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189551/IMG_1923_fsytsg.jpg",
   F:"https://res.cloudinary.com/dxk4wyejt/image/upload/v1777189765/New_Project_dtrx89.jpg"
@@ -231,6 +232,11 @@ var products = [
     {size:"6吋",hint:"約6-8人",price:1380},
     {size:"8吋",hint:"約7-10人",price:1880}
   ]},
+  {id:"H",type:"cake",name:"柴燒黑糖起司蛋糕",desc:"可冷凍宅配",img:IMG.H,sizes:[
+    {size:"4吋",hint:"約2-3人",price:590},
+    {size:"6吋",hint:"約6-8人",price:980},
+    {size:"8吋",hint:"約7-10人",price:1460}
+  ]},
   {id:"D",type:"single",name:"香草可麗露",desc:"",img:IMG.D,price:80,unit:"顆"},
   {id:"E",type:"single",name:"焦糖嫩布丁",desc:"",img:IMG.E,price:90,unit:"杯"},
   {id:"F",type:"single",name:"3入馬卡龍禮盒",desc:"",img:IMG.F,price:260,unit:"盒"}
@@ -246,19 +252,8 @@ products.filter(function(p){return p.type==="single";}).forEach(function(p){ sin
 function formatDateWithWeekday(dateStr) {
   if(!dateStr) return dateStr;
   var d = new Date(dateStr+"T00:00:00");
-  var m = d.getMonth()+1;
-  var day = d.getDate();
   var w = WEEKDAY[d.getDay()];
   return dateStr+"（"+w+"）";
-}
-
-function formatDateShort(dateStr) {
-  if(!dateStr) return "";
-  var d = new Date(dateStr+"T00:00:00");
-  var m = String(d.getMonth()+1).padStart(2,"0");
-  var day = String(d.getDate()).padStart(2,"0");
-  var w = WEEKDAY[d.getDay()];
-  return m+"/"+day+"("+w+")";
 }
 
 function validateDate(el) {
@@ -370,8 +365,10 @@ function buildOrder(){
   var pickupTime=document.getElementById("pickupTime").value;
   var note=document.getElementById("note").value.trim();
 
-  var pickupDateDisplay = formatDateWithWeekday(pickupDate);
-  var pickupDateShort = formatDateShort(pickupDate);
+  var pickupDateDisplay=formatDateWithWeekday(pickupDate);
+
+  var d=new Date(pickupDate+"T00:00:00");
+  var pickupDateShort=pad(d.getMonth()+1)+"/"+pad(d.getDate())+"("+WEEKDAY[d.getDay()]+")";
 
   products.filter(function(p){return p.type==="cake";}).forEach(function(p){
     p.sizes.forEach(function(s){
@@ -425,11 +422,8 @@ function buildOrder(){
     ]});
   }
 
-  var itemLines = items.map(function(i){
-    return i.name+(i.qty>1?" ×"+i.qty:"");
-  }).join("\n");
-
-  var copyText = "(已付)"+pickupDateShort+"　"+pickupTime+"\n"+name+"　"+phone+"\n"+itemLines+"\nℹ️官：";
+  var itemLines=items.map(function(i){return i.name+(i.qty>1?" ×"+i.qty:"");}).join("\n");
+  var quickSummary="(已付)"+pickupDateShort+"　"+pickupTime+"\n"+name+"　"+phone+"\n"+itemLines+"\nℹ️官：";
 
   return {
     lineUID:lineUID,
@@ -442,6 +436,7 @@ function buildOrder(){
     itemsText:items.map(function(i){
       return i.name+" x"+i.qty+(i.price>0?"　NT$"+i.sub.toLocaleString():"　詢價");
     }).join("\n"),
+    quickSummary:quickSummary,
     flexBody:JSON.stringify({
       type:"box",layout:"vertical",backgroundColor:"#faf8f2",paddingAll:"16px",spacing:"md",
       contents:[
@@ -489,10 +484,6 @@ function buildOrder(){
         {type:"text",text:"備註："+(note||"（無備註）"),size:"xs",color:"#3e4455",wrap:true},
         {type:"box",layout:"vertical",backgroundColor:"#f2ece0",borderColor:"#c8b898",borderWidth:"2px",cornerRadius:"4px",paddingAll:"10px",contents:[
           {type:"text",text:"請於完成匯款後，回傳匯款截圖或帳號後五碼，感謝您的支持 ♥",size:"xs",color:"#5c6275",wrap:true}
-        ]},
-        {type:"box",layout:"horizontal",paddingTop:"4px",contents:[
-          {type:"filler"},
-          {type:"button",action:{type:"clipboard",label:"· · ·",clipboardText:copyText},style:"link",color:"#e4ddd0",height:"sm",flex:0}
         ]}
       ])
     }),
